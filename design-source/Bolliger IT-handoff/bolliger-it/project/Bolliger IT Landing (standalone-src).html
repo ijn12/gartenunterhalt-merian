@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bolliger IT — PC-Beratung und Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF6;
+    --bg-card: #FFFFFF;
+    --ink: #131313;
+    --ink-2: #3A3A38;
+    --ink-3: #6B6B68;
+    --line: #E6E5DE;
+    --line-2: #EFEDE6;
+    --blue: #1E96D4;
+    --blue-deep: #0F6FA3;
+    --orange: #F39200;
+    --orange-soft: #FCE7C5;
+    --btn: #2A2A28;
+    --btn-hover: #131313;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  .mono { font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-feature-settings: normal; }
+  .serif { font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400; }
+  button { font-family: inherit; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--orange); color: #fff; }
+  @media (max-width: 1100px) {
+    .hide-md { display: none !important; }
+  }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#FAFAF6">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FAFAF6"/>
+    <g transform="translate(380 320)">
+      <text x="0" y="0" font-family="Geist, Helvetica, sans-serif" font-size="120" font-weight="600" fill="#131313" letter-spacing="-3">Bolliger</text>
+      <text x="0" y="120" font-family="Geist, Helvetica, sans-serif" font-size="120" font-weight="700" fill="#F39200" letter-spacing="-3">IT</text>
+      <rect x="0" y="170" width="60" height="6" fill="#F39200"/>
+    </g>
+  </svg>
+</template>
+<div id="root"></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>

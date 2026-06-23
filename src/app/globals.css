@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-bg: #fafaf6;
+  --color-bg-card: #ffffff;
+
+  --color-ink: #233a47;
+  --color-ink-2: #3f5561;
+  --color-ink-3: #6b7f89;
+
+  --color-line: #e6e5de;
+  --color-line-2: #efede6;
+
+  --color-blue: #1e96d4;
+  --color-blue-deep: #0f6fa3;
+
+  --color-orange: #ff7520;
+  --color-orange-soft: #ffede0;
+
+  --color-navy: #233a47;
+
+  --color-btn: #233a47;
+  --color-btn-hover: #1a2e39;
+
+  /* Fonts – distinct vars from next/font to avoid circular references in @theme */
+  --font-sans: var(--font-geist-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: var(--font-instrument-serif), "Times New Roman", serif;
+
+  /* Layout */
+  --spacing-shell: 80rem; /* 1280px content max-width */
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Links inherit color by default, but Tailwind text-* utilities still win
+     because the utilities layer is applied after this base layer. */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--color-orange);
+    color: #fff;
+  }
+}
+
+/* Subtle infinite float used by accent chips */
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
