@@ -20,7 +20,7 @@ export function Hero() {
       {/* Mobile/tablet: even scrim over centered crop */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 lg:hidden"
+        className="hero-scrim-mobile absolute inset-0 -z-10 lg:hidden"
         style={{
           background:
             "linear-gradient(180deg, rgba(8,18,26,0.82) 0%, rgba(8,18,26,0.58) 48%, rgba(8,18,26,0.52) 100%)",
@@ -29,7 +29,7 @@ export function Hero() {
       {/* Desktop: lighter left-to-right scrim for copy on the dark side */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 hidden lg:block"
+        className="hero-scrim-desktop absolute inset-0 -z-10 hidden lg:block"
         style={{
           background:
             "linear-gradient(100deg, rgba(8,18,26,0.72) 0%, rgba(8,18,26,0.45) 42%, rgba(8,18,26,0.15) 100%)",

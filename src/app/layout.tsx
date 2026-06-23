@@ -24,41 +24,37 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-const siteUrl = "https://www.bolligerit.ch";
+const siteUrl = "https://www.gartenunterhalt-merian.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bolliger IT – PC-Beratung und Service im Aargau",
-    template: "%s · Bolliger IT",
+    default: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
+    template: "%s · Gartenunterhalt Merian",
   },
   description:
-    "Ehrliche PC- und Geräte-Reparatur aus dem Aargau. Über 30 Jahre Erfahrung in Multimedia und IT – persönlich, unabhängig und auf Augenhöhe. Reparieren statt wegwerfen.",
+    "Professioneller Gartenunterhalt und Gartenpflege. Persönlich, zuverlässig und mit Sorgfalt für Ihren Garten.",
   keywords: [
-    "Bolliger IT",
-    "PC Reparatur Aargau",
-    "Computer Service",
-    "IT Beratung",
-    "Datenrettung",
-    "Gaming PC",
-    "Vor-Ort-Service",
-    "Roger Bolliger",
+    "Gartenunterhalt Merian",
+    "Gartenpflege",
+    "Gartenunterhalt",
+    "Merian",
   ],
-  authors: [{ name: "Bolliger IT" }],
+  authors: [{ name: "Gartenunterhalt Merian" }],
   openGraph: {
     type: "website",
     locale: "de_CH",
     url: siteUrl,
-    siteName: "Bolliger IT",
-    title: "Bolliger IT – PC-Beratung und Service",
+    siteName: "Gartenunterhalt Merian",
+    title: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
     description:
-      "Reparieren statt wegwerfen. Technische Hilfe aus einer Hand – mit über 30 Jahren Erfahrung in Multimedia und IT.",
+      "Professioneller Gartenunterhalt und Gartenpflege – persönlich und zuverlässig.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bolliger IT – PC-Beratung und Service",
+    title: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
     description:
-      "Reparieren statt wegwerfen. Technische Hilfe aus einer Hand im Aargau.",
+      "Professioneller Gartenunterhalt und Gartenpflege – persönlich und zuverlässig.",
   },
   icons: {
     icon: "/favicon.ico",

@@ -3,9 +3,9 @@ import { dataset, projectId } from "./sanity/env";
 
 export default defineCliConfig({
   api: { projectId, dataset },
-  studioHost: "gardener-website",
+  studioHost: "gartenunterhalt-merian",
   deployment: {
-    appId: "k30ag74oqzrd9vivj02yy72w",
+    appId: "id6pjf3aqpg7rulnz31vhjks",
     autoUpdates: true,
   },
 });

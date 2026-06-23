@@ -7,7 +7,7 @@ import { PillButton } from "../PillButton";
 import { useSiteCms } from "@/sanity/useSiteCms";
 import type { SitePopup as SitePopupType } from "@/sanity/types";
 
-const DISMISS_KEY = "bolligerit-dismissed-popups";
+const DISMISS_KEY = "gartenunterhalt-merian-dismissed-popups";
 
 function getDismissedIds(): string[] {
   if (typeof window === "undefined") return [];

@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="theme-gartenunterhalt">
       <Header />
       <main>
         <Hero />
@@ -26,6 +26,6 @@ export default function Home() {
         <CtaBand />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

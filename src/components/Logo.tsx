@@ -1,19 +1,15 @@
-import Image from "next/image";
-
 type LogoProps = {
   className?: string;
   priority?: boolean;
 };
 
-export function Logo({ className = "h-9 w-auto", priority = false }: LogoProps) {
+export function Logo({ className = "inline-block", priority: _priority = false }: LogoProps) {
   return (
-    <Image
-      src="/bolligerit-logo.png"
-      alt="Bolliger IT – PC-Beratung und Service"
-      width={2269}
-      height={615}
-      priority={priority}
-      className={className}
-    />
+    <span
+      className={`font-serif text-[1.35rem] leading-none tracking-[-0.02em] text-ink sm:text-[1.5rem] ${className}`}
+    >
+      Gartenunterhalt{" "}
+      <span className="italic text-ink-2">Merian</span>
+    </span>
   );
 }

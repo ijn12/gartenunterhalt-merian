@@ -84,7 +84,7 @@ export function OpeningCountdown({
         <CountdownChip label="Min" value={t.m} />
         <CountdownChip label="Sek" value={t.s} />
       </div>
-      <div className="mt-3 flex items-center gap-3 rounded-xl border border-[#ddeaf4] bg-[linear-gradient(180deg,#F4FAFE_0%,#ECF5FC_100%)] px-3.5 py-2.5 sm:mt-5 sm:px-4 sm:py-3.5">
+      <div className="countdown-status mt-3 flex items-center gap-3 rounded-xl border border-[#ddeaf4] bg-[linear-gradient(180deg,#F4FAFE_0%,#ECF5FC_100%)] px-3.5 py-2.5 sm:mt-5 sm:px-4 sm:py-3.5">
         <Label tone="accent" className="shrink-0 tracking-[0.08em]">
           {statusLabel}
         </Label>

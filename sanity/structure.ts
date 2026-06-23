@@ -8,7 +8,7 @@ const singleton = (
 
 export const structure: StructureResolver = (S) =>
   S.list()
-    .title("Bolliger IT")
+    .title("Gartenunterhalt Merian")
     .items([
       S.listItem()
         .title("Inhalte (Seiten)")

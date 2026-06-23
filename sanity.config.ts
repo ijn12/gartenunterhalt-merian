@@ -12,8 +12,8 @@ import { structure } from "./sanity/structure";
 const basePath = process.env.SANITY_STUDIO_BASEPATH ?? "/studio";
 
 export default defineConfig({
-  name: "gardener-website",
-  title: "Gardener Website",
+  name: "gartenunterhalt-merian",
+  title: "Gartenunterhalt Merian",
   basePath,
   projectId: projectId || "placeholder",
   dataset,

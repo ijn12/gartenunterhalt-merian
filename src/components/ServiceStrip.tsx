@@ -8,7 +8,7 @@ import { useSiteContent } from "@/sanity/useSiteContent";
 export function ServiceStrip() {
   const { marketing } = useSiteContent();
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0F6FA3_0%,#1E96D4_60%,#2BA6E0_100%)] text-white">
+    <section className="service-strip-band relative overflow-hidden bg-[linear-gradient(135deg,#0F6FA3_0%,#1E96D4_60%,#2BA6E0_100%)] text-white">
       <svg
         aria-hidden
         className="absolute inset-0 h-full w-full opacity-[0.18] mix-blend-soft-light"

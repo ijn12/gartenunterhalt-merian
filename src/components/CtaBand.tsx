@@ -14,7 +14,7 @@ export function CtaBand() {
           <div className="relative overflow-hidden rounded-[28px] bg-ink px-8 py-16 text-white sm:px-14 sm:py-20">
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-95"
+              className="cta-band-bg pointer-events-none absolute inset-0 opacity-95"
               style={{
                 background:
                   "radial-gradient(85% 140% at 100% 0%, rgba(255,117,32,0.52), transparent 48%), radial-gradient(70% 120% at 0% 100%, rgba(255,117,32,0.38), transparent 52%), radial-gradient(55% 90% at 65% 50%, rgba(30,150,212,0.18), transparent 55%)",

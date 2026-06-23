@@ -66,7 +66,7 @@ export function Header() {
         className="relative z-[60] border-b border-line bg-bg"
       >
         <Container className="flex items-center justify-between gap-6 py-3.5">
-        <Link href="/" aria-label="Bolliger IT – zur Hauptseite" className="shrink-0">
+        <Link href="/" aria-label="Gartenunterhalt Merian – zur Hauptseite" className="shrink-0">
           <Logo priority className="h-10 w-auto sm:h-11" />
         </Link>
 
