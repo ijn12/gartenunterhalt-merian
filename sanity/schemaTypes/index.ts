@@ -12,6 +12,7 @@ import { offerSection } from "./singletons/offerSection";
 import { testimonialsSection } from "./singletons/testimonialsSection";
 import { legalContent } from "./singletons/legalContent";
 import { marketingSections } from "./singletons/marketingSections";
+import { bookingContent } from "./singletons/bookingContent";
 
 export const schemaTypes = [
   // Singletons – Seiteninhalte
@@ -22,6 +23,7 @@ export const schemaTypes = [
   testimonialsSection,
   pricing,
   offerSection,
+  bookingContent,
   contactInfo,
   legalContent,
   // Singletons – Banner

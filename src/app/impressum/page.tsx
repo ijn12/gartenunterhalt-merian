@@ -5,7 +5,7 @@ import { ImpressumContent } from "./ImpressumContent";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und rechtliche Angaben zu Bolliger IT, Roger Bolliger, Uerkheim.",
+  description: "Impressum und rechtliche Angaben zu Gartenunterhalt Merian.",
 };
 
 export default function ImpressumPage() {

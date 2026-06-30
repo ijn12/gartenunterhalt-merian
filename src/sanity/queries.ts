@@ -87,5 +87,11 @@ export const siteCmsQuery = groq`{
   "legal": *[_type == "legalContent" && _id == "legalContent"][0]{
     impressumSubtitle, bank, hosting, responsible, privacyOfficer, treuhand,
     footerTagline, footerLinks[]{ label, href }, privacyNote
+  },
+  "booking": *[_type == "bookingContent" && _id == "bookingContent"][0]{
+    eyebrow, title, intro, providerName, providerUrl, embedUrl,
+    fallbackTitle, fallbackBody,
+    primaryCtaLabel, primaryCtaHref, secondaryCtaLabel, secondaryCtaHref,
+    notes
   }
 }`;

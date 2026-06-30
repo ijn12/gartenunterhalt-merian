@@ -1,39 +1,45 @@
 # Sanity CMS – Gartenunterhalt Merian
 
-Roger-style CMS for editable website content (currently still filled with Bolliger IT placeholder content).
+Sanity is optional. Without a configured Sanity project, the site uses fallback content from `src/lib/site.ts`.
 
-## Projekt
+## What Can Be Managed
 
-| | |
-|---|---|
-| **Project ID** | `0f90qi1t` |
-| **Dataset** | `production` |
-| **Manage** | [sanity.io/manage/project/0f90qi1t](https://www.sanity.io/manage/project/0f90qi1t) |
+| Inhalt | Wo es erscheint |
+|--------|------------------|
+| Laufbanner | Leiste unter dem Header |
+| Pop-ups | Hinweise, Ferien, wichtige Informationen |
+| Hero / Über uns | Startseite |
+| Gartenleistungen | Service-Karten auf der Startseite |
+| Buchung | Drittanbieter-Link, Embed-URL und Fallback-Text |
+| Kontakt & Standort | Kontaktseite, Footer und Impressum |
+| Rechtliches | Impressum, Footer und Datenschutzhinweis |
 
-`.env.local`:
+## Setup
 
-```env
-NEXT_PUBLIC_SANITY_PROJECT_ID=0f90qi1t
-NEXT_PUBLIC_SANITY_DATASET=production
-```
+1. Kostenloses Projekt erstellen: [sanity.io/manage](https://www.sanity.io/manage)
+2. **Project ID** und **Dataset** (`production`) in `.env.local` eintragen:
 
-## Studio öffnen
+   ```env
+   NEXT_PUBLIC_SANITY_PROJECT_ID=ihre-project-id
+   NEXT_PUBLIC_SANITY_DATASET=production
+   ```
 
-- **Gehostet:** [https://gartenunterhalt-merian.sanity.studio](https://gartenunterhalt-merian.sanity.studio)
-- **Lokal:** [http://localhost:3000/studio](http://localhost:3000/studio) (with `npm run dev`)
-- **Separat:** `npm run sanity` → [http://localhost:3333](http://localhost:3333)
+3. In Sanity Manage → **API → CORS origins** hinzufügen:
+   - `http://localhost:3000`
+   - Ihre Live-Domain
 
-### Studio neu deployen
+4. Dev-Server neu starten:
 
-```bash
-SANITY_STUDIO_BASEPATH=/ npm run sanity:deploy
-```
+   ```bash
+   npm run dev
+   ```
 
-## CORS origins
+## Studio
 
-- `http://localhost:3000`
-- Production URL when deployed (e.g. `https://www.gartenunterhalt-merian.ch`)
+- Lokal eingebettet: [http://localhost:3000/studio](http://localhost:3000/studio)
+- Separat: `npm run sanity` → meist [http://localhost:3333](http://localhost:3333)
+- Gehostet: `npm run sanity:deploy`
 
-## Nächste Schritte
+## Booking Provider
 
-Replace all CMS content (hero, services, contact, testimonials, etc.) with Gartenunterhalt Merian copy.
+Sobald der Anbieter feststeht, in Sanity unter **Buchung** entweder den direkten Buchungslink oder eine erlaubte Embed-URL eintragen. Die Website bleibt statisch; die eigentliche Buchung läuft beim Drittanbieter.

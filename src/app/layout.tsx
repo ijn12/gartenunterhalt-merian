@@ -29,16 +29,20 @@ const siteUrl = "https://www.gartenunterhalt-merian.ch";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
+    default: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
     template: "%s · Gartenunterhalt Merian",
   },
   description:
-    "Professioneller Gartenunterhalt und Gartenpflege. Persönlich, zuverlässig und mit Sorgfalt für Ihren Garten.",
+    "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten. Unkompliziert geplant, sauber umgesetzt und direkt buchbar.",
   keywords: [
     "Gartenunterhalt Merian",
-    "Gartenpflege",
     "Gartenunterhalt",
-    "Merian",
+    "Rasenpflege",
+    "Heckenschnitt",
+    "Schnittarbeiten",
+    "Saisonarbeiten Garten",
+    "Gärtner Aargau",
+    "Gartenservice",
   ],
   authors: [{ name: "Gartenunterhalt Merian" }],
   openGraph: {
@@ -46,15 +50,15 @@ export const metadata: Metadata = {
     locale: "de_CH",
     url: siteUrl,
     siteName: "Gartenunterhalt Merian",
-    title: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
+    title: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
     description:
-      "Professioneller Gartenunterhalt und Gartenpflege – persönlich und zuverlässig.",
+      "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gartenunterhalt Merian – Gartenpflege und Unterhalt",
+    title: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
     description:
-      "Professioneller Gartenunterhalt und Gartenpflege – persönlich und zuverlässig.",
+      "Unkomplizierter Gartenunterhalt: persönlich geplant, sauber umgesetzt.",
   },
   icons: {
     icon: "/favicon.ico",

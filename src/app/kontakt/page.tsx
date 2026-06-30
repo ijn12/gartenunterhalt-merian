@@ -6,7 +6,7 @@ import { KontaktContent } from "./KontaktContent";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt zu Bolliger IT in Uerkheim – per Formular, Telefon oder E-Mail. Adresse, Öffnungszeiten und Standort auf der Karte.",
+    "Kontakt zu Gartenunterhalt Merian für Schnittarbeiten, Rasenpflege und saisonale Gartenarbeiten – per E-Mail, Telefon oder Kontaktformular.",
 };
 
 export default function KontaktPage() {

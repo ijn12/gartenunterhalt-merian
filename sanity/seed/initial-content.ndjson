@@ -1,6 +1,6 @@
-{"_id":"usp-hotline","_type":"usp","title":"Persönlich statt Hotline","body":"Sie schildern mir Ihre Sorgen, ich löse sie bestmöglich und unabhängig. Ohne überteuerte Hotline. Ohne KI-Assistent. Einfach Mensch zu Mensch.","sortOrder":0}
-{"_id":"usp-erfahrung","_type":"usp","title":"Über 30 Jahre Erfahrung","body":"Als gelernter Audio-/Video-Elektroniker gebe ich mein fundiertes Wissen aus Multimedia und IT gerne weiter – bei Hardware, Software und beim Neukauf.","sortOrder":1}
-{"_id":"usp-reparieren","_type":"usp","title":"Reparieren statt wegwerfen","body":"Nicht alles muss gleich ersetzt werden. Oft bringe ich ein Gerät ohne grosse Kosten wieder zum Laufen – das schont Ihr Budget und die Umwelt.","sortOrder":2}
-{"_id":"value-vision","_type":"value","title":"Meine Vision","body":"PC-Support von Mensch zu Mensch – zu fairen Preisen.","icon":"eye","sortOrder":0}
-{"_id":"value-mission","_type":"value","title":"Meine Mission","body":"Reparieren statt Wegwerfen schont das Budget und die Umwelt.","icon":"target","sortOrder":1}
-{"_id":"value-philosophie","_type":"value","title":"Meine Philosophie","body":"Zufriedene Kunden machen auch mich glücklich.","icon":"heart","sortOrder":2}
+{"_id":"usp-planung","_type":"usp","title":"Persönlich geplant","body":"Jeder Garten ist anders. Deshalb beginnt die Arbeit mit einem kurzen Gespräch und einem Blick vor Ort.","sortOrder":0}
+{"_id":"usp-saison","_type":"usp","title":"Saisonal sinnvoll","body":"Schnitt, Pflege und Pflanzung werden so geplant, dass sie zur Jahreszeit und zum Zustand des Gartens passen.","sortOrder":1}
+{"_id":"usp-sauber","_type":"usp","title":"Sauber abgeschlossen","body":"Nach dem Einsatz soll der Garten gepflegt aussehen und wieder Freude machen – inklusive sauberem Aufräumen.","sortOrder":2}
+{"_id":"value-ruhig","_type":"value","title":"Ruhig","body":"Guter Gartenunterhalt muss nicht kompliziert sein: anschauen, planen, sauber umsetzen.","icon":"eye","sortOrder":0}
+{"_id":"value-natuerlich","_type":"value","title":"Natürlich","body":"Pflanzen, Boden und Saison geben den Takt vor.","icon":"target","sortOrder":1}
+{"_id":"value-verlaesslich","_type":"value","title":"Verlässlich","body":"Klare Absprachen und realistische Termine sind wichtiger als leere Versprechen.","icon":"heart","sortOrder":2}

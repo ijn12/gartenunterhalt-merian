@@ -99,8 +99,10 @@ export function SitePopup() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setDismissed(getDismissedIds());
-    setReady(true);
+    queueMicrotask(() => {
+      setDismissed(getDismissedIds());
+      setReady(true);
+    });
   }, []);
 
   const popup = content?.popups.find((item) => !dismissed.includes(item._id));

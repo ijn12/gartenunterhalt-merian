@@ -188,6 +188,22 @@ export type CmsLegal = {
   privacyNote?: string;
 };
 
+export type CmsBooking = {
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+  providerName?: string;
+  providerUrl?: string;
+  embedUrl?: string;
+  fallbackTitle?: string;
+  fallbackBody?: string;
+  primaryCtaLabel?: string;
+  primaryCtaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+  notes?: string[];
+};
+
 export type SiteCmsContent = {
   banner: SiteBanner | null;
   popups: SitePopup[];
@@ -203,4 +219,5 @@ export type SiteCmsContent = {
   offer: CmsOffer | null;
   testimonials: CmsTestimonials | null;
   legal: CmsLegal | null;
+  booking: CmsBooking | null;
 };

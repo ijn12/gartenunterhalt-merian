@@ -1,19 +1,19 @@
 import type { ServiceIconName } from "@/components/icons";
 
 export const contact = {
-  company: "Bolliger IT",
-  owner: "Roger Bolliger",
-  street: "Dorfstrasse 76",
-  zip: "4813",
-  city: "Uerkheim",
+  company: "Gartenunterhalt Merian",
+  owner: "Merian",
+  street: "Adresse folgt",
+  zip: "0000",
+  city: "Region Aargau",
   country: "Schweiz",
-  phone: "062 543 58 91",
-  phoneHref: "tel:+41625435891",
-  mobile: "078 402 91 65",
-  mobileHref: "tel:+41784029165",
-  email: "roger@bolligerit.ch",
-  emailHref: "mailto:roger@bolligerit.ch",
-  website: "www.bolligerit.ch",
+  phone: "Telefon folgt",
+  phoneHref: "tel:+41000000000",
+  mobile: "Mobile folgt",
+  mobileHref: "tel:+41000000000",
+  email: "info@gartenunterhalt-merian.ch",
+  emailHref: "mailto:info@gartenunterhalt-merian.ch",
+  website: "www.gartenunterhalt-merian.ch",
 } as const;
 
 export type ServiceItem = {
@@ -23,184 +23,177 @@ export type ServiceItem = {
 };
 
 export type ServiceDetail = Omit<ServiceItem, "desc"> & {
-  /** Placeholder or photo – swap files in /public/services/ */
+  /** Placeholder or photo - swap files in /public/hero/ when real garden photos are ready. */
   image: string;
   paragraphs: string[];
 };
 
-/** Home page – service overview (matches Roger's current site). */
+/** Home page – compact gardening service overview. */
 export const homeServices: ServiceItem[] = [
   {
     icon: "Home",
-    title: "Vor-Ort-Service",
-    desc: "Gerne löse ich Ihre Probleme rund um PC, Notebook, Drucker, Internet, E-Mail, Telekom-Abos, WLAN, NAS usw. vor Ort.",
-  },
-  {
-    icon: "Desktop",
-    title: "PC-Service im Geschäft",
-    desc: "Ich bringe Ihre Geräte wie PCs, Drucker, Router, NAS, Modems, TV-Boxen usw. wieder in Schuss.",
-  },
-  {
-    icon: "Mobile",
-    title: "Support für mobile Geräte",
-    desc: "Grundlegende Hilfe rund um Apps, E-Mail, Updates und Cloud für iPhones, Tablets und Co.",
-  },
-  {
-    icon: "Gaming",
-    title: "PC-Gaming",
-    desc: "Beratung, Support und Aufrüstung für Gaming-PCs – von der Luft- bis zur Custom-Wasserkühlung.",
+    title: "Gartenunterhalt",
+    desc: "Regelmässige Pflege für private Gärten: jäten, schneiden, aufräumen und kleine Arbeiten rund ums Grün.",
   },
   {
     icon: "Wrench",
-    title: "Allgemeine Reparaturen",
-    desc: "Stecker lose, Kabel ab … Ich repariere und löte auch kleinere Defekte an technischen Geräten.",
+    title: "Hecken & Sträucher",
+    desc: "Saubere Formschnitte, Rückschnitte und saisonale Pflege, damit Wege, Beete und Sitzplätze wieder Luft bekommen.",
   },
   {
     icon: "Heart",
-    title: "Beratung mit Herz",
-    desc: "Bei technischen Fragen rund um neue Programme, Provider- oder Abowechsel, WLAN und Handy-Abos helfe ich gerne und unabhängig.",
-  },
-];
-
-/** Dienstleistungen page – detailed service descriptions. */
-export const services: ServiceDetail[] = [
-  {
-    icon: "Heart",
-    title: "Persönliche Beratung",
-    paragraphs: [
-      "Bei Problemen berate ich Sie persönlich. Ein Anruf genügt!",
-      "Sie schlagen sich nicht mit endlosen Hotlines, doofen Ticketsystemen oder einfallslosen KI-Assistenten herum.",
-      "Ich bin persönlich für Sie da!",
-    ],
-    image: "/services/dienstleistungen/persoenliche-beratung.jpg",
-  },
-  {
-    icon: "Wrench",
-    title: "Professionelle Arbeit",
-    paragraphs: [
-      "Mit fast 40 Jahren Berufserfahrung im TV- und Informatikbereich kenne ich mich bestens aus. Es muss nicht immer alles gleich weggeworfen und entsorgt werden. Oft gibt es Lösungen, um ein Gerät ohne grosse Kosten wieder zum Laufen zu bringen. Dabei stehe ich gerne neutral und professionell auf Ihrer Seite.",
-    ],
-    image: "/services/dienstleistungen/professionelle-arbeit.jpg",
-  },
-  {
-    icon: "Home",
-    title: "Hilfe bei Ihnen zu Hause",
-    paragraphs: [
-      "Oft ist es besser und persönlicher, die Probleme vor Ort zu lösen. Auf Voranmeldung besuche ich Sie gerne bei Ihnen zu Hause, um die Probleme direkt vor Ort zu beheben – oder um diskretere Angelegenheiten wie Steuer- und Banksachen unter vier Augen zu klären.",
-    ],
-    image: "/services/dienstleistungen/hilfe-zuhause.jpg",
-  },
-  {
-    icon: "Desktop",
-    title: "Beratung und Schulung",
-    paragraphs: [
-      "Oft liegen die Probleme nicht an den Geräten. Gerne berate und schule ich Sie. Gemeinsam erstellen wir Spickzettel oder kleine Anleitungen, um kompliziertere Aufgaben am PC oder Handy einfach zu lösen.",
-    ],
-    image: "/services/dienstleistungen/beratung-schulung.jpg",
+    title: "Bepflanzung & Pflege",
+    desc: "Neue Pflanzen setzen, bestehende Beete auffrischen und den Garten passend zur Jahreszeit vorbereiten.",
   },
   {
     icon: "Box",
-    title: "Neugeräte",
-    paragraphs: [
-      "Falls Ihr Gerät wirklich nicht mehr zu retten ist oder sich eine Reparatur nicht mehr lohnt, verkaufe ich Ihnen gerne auch neue PCs, Mini-PCs oder Notebooks. Eine kleine Auswahl finden Sie im Geschäft, oder wir bestellen etwas Passendes von Asus, HP oder Lenovo für Sie.",
-      "Desktop-PCs bauen wir Ihnen auf Wunsch auch individuell in unserer Werkstatt zusammen.",
-      "Oder wir suchen für Sie eine günstige Occasion.",
-    ],
-    image: "/services/dienstleistungen/neugeraete.jpg",
+    title: "Saisonarbeiten",
+    desc: "Frühlingsputz, Herbstschnitt, Laub, Grüngut und alles, was vor oder nach der Gartensaison anfällt.",
   },
   {
-    icon: "Penguin",
-    title: "Weg von Windows",
+    icon: "Mobile",
+    title: "Rasenpflege",
+    desc: "Mähen, Kanten schneiden und einfache Pflegearbeiten für eine gepflegte, nutzbare Rasenfläche.",
+  },
+  {
+    icon: "Heart",
+    title: "Beratung vor Ort",
+    desc: "Gemeinsam anschauen, was nötig ist, realistisch priorisieren und eine unkomplizierte Lösung finden.",
+  },
+];
+
+/** Optional detail content, kept for CMS compatibility and future service sections. */
+export const services: ServiceDetail[] = [
+  {
+    icon: "Heart",
+    title: "Gartenunterhalt nach Bedarf",
     paragraphs: [
-      "Microsoft wird immer grösser, teurer und will mit Ihren Daten Geld verdienen.",
-      "Daher biete ich Ihnen gerne ein Linux-System als Alternative an. Linux ist einfach und sicher: Sie können damit Briefe schreiben, mailen, surfen, drucken und scannen. Und das Beste: Es kostet keinen Franken an Lizenzgebühren oder Abokosten. Linux läuft zudem auch auf älterer Hardware schnell und stabil, sodass wir Ihre alten Geräte weiterverwenden können.",
-      "Gerne zeige ich Ihnen Linux an einem Demogerät.",
+      "Ob einmaliger Einsatz oder wiederkehrende Pflege: Der Garten wird zuerst vor Ort angeschaut, damit Aufwand und Prioritäten klar sind.",
+      "Danach entsteht ein einfacher Vorschlag für die nächsten Schritte.",
     ],
-    image: "/services/dienstleistungen/weg-von-windows.jpg",
+    image: "/hero/garden-gallery-1.svg",
+  },
+  {
+    icon: "Wrench",
+    title: "Schnittarbeiten",
+    paragraphs: [
+      "Hecken, Sträucher und kleinere Gehölze werden mit Blick auf Form, Gesundheit und Saison gepflegt.",
+    ],
+    image: "/hero/garden-gallery-2.svg",
+  },
+  {
+    icon: "Home",
+    title: "Saisonale Einsätze",
+    paragraphs: [
+      "Frühling und Herbst bringen oft viel Arbeit auf einmal. Ein geplanter Einsatz hilft, den Garten rechtzeitig bereit zu machen.",
+    ],
+    image: "/hero/garden-gallery-3.svg",
+  },
+  {
+    icon: "Box",
+    title: "Bepflanzung",
+    paragraphs: [
+      "Beete auffrischen, neue Pflanzen einsetzen und vorhandene Pflanzen so pflegen, dass sie zum Standort passen.",
+    ],
+    image: "/hero/garden-about.svg",
   },
 ];
 
 export const offer = {
-  title: "Exklusives Angebot",
-  body: "Kommen Sie mit Ihren technischen Problemen zu mir und wir suchen eine optimale Lösung. Bis am 30.09.2026 erstelle ich Ihnen einen unabhängigen Kostenvoranschlag kostenlos.",
-  deadline: "Gültig bis 30.09.2026",
+  title: "Erster Garten-Check",
+  body: "Bei neuen Anfragen schauen wir gemeinsam an, welche Arbeiten wirklich sinnvoll sind und welche Priorität haben.",
+  deadline: "Unverbindlich anfragen",
 } as const;
 
 export const openingHours: { day: string; time: string }[] = [
-  { day: "Montag", time: "14:00 – 18:00" },
-  { day: "Mittwoch", time: "14:00 – 18:00" },
-  { day: "Freitag", time: "14:00 – 18:00" },
-  { day: "Sonst", time: "nach Vereinbarung" },
+  { day: "Montag – Freitag", time: "nach Vereinbarung" },
+  { day: "Samstag", time: "nach Vereinbarung" },
+  { day: "Sonntag", time: "geschlossen" },
 ];
 
-export const openingNote = "Sonntag geschlossen";
+export const openingNote = "Termine werden wetter- und saisonabhängig geplant.";
 
 export const holidays: { label: string; range: string }[] = [
-  { label: "Weihnachten 2026", range: "24.12.2026 – 04.01.2027" },
-  { label: "Sportferien 2027", range: "24.01.2027 – 31.01.2027" },
-  { label: "Frühlingsferien 2027", range: "folgt" },
+  { label: "Betriebsferien", range: "folgt" },
 ];
 
 export const tariffs: { label: string; price: string }[] = [
-  { label: "Schulungen / Privatlektionen", price: "CHF 88.– / Std." },
-  { label: "Reparaturen im Geschäft", price: "CHF 100.– / Std." },
-  { label: "Reparaturen beim Kunden", price: "CHF 120.– / Std." },
-  { label: "Kostenvoranschlag", price: "CHF 50.– / Gerät" },
+  { label: "Gartenunterhalt", price: "nach Aufwand" },
+  { label: "Schnittarbeiten", price: "nach Aufwand" },
+  { label: "Saisonarbeiten", price: "nach Vereinbarung" },
 ];
 
 export const tariffNote =
-  "Stundentarife werden auf die Viertelstunde gerundet. Neukunden im Laden in der Regel bar, mit EC, Kreditkarte oder Twint. Bekannte Kunden auch auf Rechnung (zahlbar innert 10 Tagen).";
+  "Der genaue Aufwand hängt von Garten, Saison und Entsorgung ab. Vor dem Einsatz wird transparent besprochen, was gemacht wird.";
 
 export const wegpauschalen: { label: string; price: string }[] = [
-  { label: "Pauschale bis 10 km", price: "CHF 10.–" },
-  { label: "Pauschale bis 25 km", price: "CHF 20.–" },
-  { label: "Mehr als 25 km", price: "nach Aufwand" },
+  { label: "Region", price: "nach Vereinbarung" },
 ];
 
 export const reasons: { title: string; body: string }[] = [
   {
-    title: "Persönlich statt Hotline",
-    body: "Sie schildern mir Ihre Sorgen, ich löse sie bestmöglich und unabhängig. Ohne überteuerte Hotline. Ohne KI-Assistent. Einfach Mensch zu Mensch.",
+    title: "Persönlich geplant",
+    body: "Jeder Garten ist anders. Deshalb beginnt die Arbeit mit einem kurzen Gespräch und einem Blick vor Ort.",
   },
   {
-    title: "Über 30 Jahre Erfahrung",
-    body: "Als gelernter Audio-/Video-Elektroniker gebe ich mein fundiertes Wissen aus Multimedia und IT gerne weiter – bei Hardware, Software und beim Neukauf.",
+    title: "Saisonal sinnvoll",
+    body: "Schnitt, Pflege und Pflanzung werden so geplant, dass sie zur Jahreszeit und zum Zustand des Gartens passen.",
   },
   {
-    title: "Reparieren statt wegwerfen",
-    body: "Nicht alles muss gleich ersetzt werden. Oft bringe ich ein Gerät ohne grosse Kosten wieder zum Laufen – das schont Ihr Budget und die Umwelt.",
+    title: "Sauber abgeschlossen",
+    body: "Nach dem Einsatz soll der Garten gepflegt aussehen und wieder Freude machen – inklusive sauberem Aufräumen.",
   },
 ];
 
 export const values: { title: string; body: string }[] = [
-  { title: "Meine Vision", body: "PC-Support von Mensch zu Mensch – zu fairen Preisen." },
-  { title: "Meine Mission", body: "Reparieren statt Wegwerfen schont das Budget und die Umwelt." },
-  { title: "Meine Philosophie", body: "Zufriedene Kunden machen auch mich glücklich." },
+  { title: "Ruhig", body: "Guter Gartenunterhalt muss nicht kompliziert sein: anschauen, planen, sauber umsetzen." },
+  { title: "Natürlich", body: "Pflanzen, Boden und Saison geben den Takt vor." },
+  { title: "Verlässlich", body: "Klare Absprachen und realistische Termine sind wichtiger als leere Versprechen." },
 ];
 
 export const impressum = {
   bank: "Valiant Bank, Schöftland",
   hosting: "Netzone, Schöftland – Hosting in der Schweiz",
-  responsible: "Roger Bolliger",
-  privacyOfficer: "Roger Bolliger",
+  responsible: "Merian",
+  privacyOfficer: "Merian",
   treuhand: "Savita Treuhand",
 } as const;
 
 export const privacyNote =
-  "Diese Angaben werden zur Bearbeitung Ihrer Anfrage per E-Mail an die Firma BolligerIT weitergeleitet. Die Daten werden nicht 1:1 verschlüsselt. Vermeiden Sie die Eingabe von vertraulichen Daten. Geben Sie keinesfalls Passwörter oder Zugangsdaten in dieses Formular ein. Das Formular dient zur Kontaktaufnahme oder für Terminanfragen mit BolligerIT. Im Zweifelsfall dürfen Sie mich auch gerne anrufen oder mir eine E-Mail senden.";
+  "Diese Angaben dienen der Kontaktaufnahme und Terminabklärung. Bitte senden Sie keine vertraulichen Informationen über das Formular. Sie können sich jederzeit auch direkt per Telefon oder E-Mail melden.";
 
 export const map = {
   lat: 47.2936,
   lng: 8.0079,
   zoom: 14,
-  label: "Bolliger IT · Uerkheim",
-  /** Placeholder embed (Adnovum AG, Zürich) until the Uerkheim address is registered. */
-  embedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346458.3595932172!2d7.628674447861343!3d47.28100270005983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a13efae0fed%3A0x28c4bb0f16ded18a!2sAdnovum%20AG%20(Zurich%2C%20Headquarter)!5e0!3m2!1sen!2sch!4v1780069138899!5m2!1sen!2sch",
+  label: "Gartenunterhalt Merian · Region Aargau",
+  embedUrl: "",
+} as const;
+
+export const booking = {
+  eyebrow: "Termin buchen",
+  title: "Gartenarbeit direkt planen.",
+  intro:
+    "Die Online-Buchung wird hier eingebunden, sobald der Anbieter feststeht. Bis dahin können Sie Ihren Wunschtermin direkt per Telefon oder E-Mail anfragen.",
+  providerName: "Online-Buchung",
+  providerUrl: "",
+  embedUrl: "",
+  fallbackTitle: "Online-Buchung folgt",
+  fallbackBody:
+    "Wir bereiten eine direkte Terminbuchung vor. Für dringende Einsätze oder erste Abklärungen melden Sie sich bitte über Kontakt.",
+  primaryCtaLabel: "Kontakt aufnehmen",
+  primaryCtaHref: "/kontakt",
+  secondaryCtaLabel: "Anrufen",
+  secondaryCtaHref: contact.phoneHref,
+  notes: [
+    "Kurze Beschreibung des Gartens oder der gewünschten Arbeiten hilft bei der Planung.",
+    "Fotos können später per E-Mail nachgereicht werden.",
+    "Termine hängen von Wetter, Saison und Verfügbarkeit ab.",
+  ],
 } as const;
 
 export const nav: { label: string; href: string }[] = [
-  { label: "Hauptseite", href: "/" },
-  { label: "Dienstleistungen", href: "/dienstleistungen" },
+  { label: "Start", href: "/" },
+  { label: "Buchung", href: "/buchung" },
   { label: "Kontakt", href: "/kontakt" },
 ];

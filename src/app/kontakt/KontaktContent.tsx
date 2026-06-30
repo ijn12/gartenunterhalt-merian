@@ -16,10 +16,10 @@ export function KontaktContent() {
         image="/hero/kontakt.svg"
         title={
           <>
-            Ich helfe Ihnen <span className="font-serif italic text-white/75">gerne</span>.
+            Fragen zum <span className="font-serif italic text-white/75">Garten</span>?
           </>
         }
-        subtitle="Ein paar Zeilen reichen. Ich melde mich i. d. R. innert 24 Stunden zurück – auch wenn die Werkstatt noch nicht offiziell geöffnet ist."
+        subtitle="Schreiben Sie kurz, welche Arbeiten anstehen. Für Termine, Fotos oder erste Abklärungen können Sie sich auch direkt per Telefon oder E-Mail melden."
       />
 
       <section className="bg-bg">
@@ -65,7 +65,7 @@ export function KontaktContent() {
               })}
             </div>
 
-            {/* Öffnungszeiten */}
+            {/* Termine */}
             <div className="rounded-2xl border border-line bg-white p-6">
               <div className="mb-4 flex items-center gap-2.5">
                 <ClockIcon className="size-[18px] text-ink-2" />
@@ -89,7 +89,7 @@ export function KontaktContent() {
               </Label>
             </div>
 
-            {/* Geplante Ferien */}
+            {/* Abwesenheiten */}
             <div className="rounded-2xl border border-line bg-white p-6">
               <Label as="div" className="mb-4">
                 {opening.holidaysTitle}

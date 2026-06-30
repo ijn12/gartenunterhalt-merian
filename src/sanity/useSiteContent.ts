@@ -15,6 +15,7 @@ import {
   impressum as fbImpressum,
   privacyNote as fbPrivacyNote,
   map as fbMap,
+  booking as fbBooking,
 } from "@/lib/site";
 import type { ServiceIconName } from "@/components/icons";
 
@@ -29,78 +30,77 @@ function arr<T>(cms: T[] | null | undefined, fallback: T[]): T[] {
 }
 
 const HERO_FALLBACK = {
-  headingLine1: "Reparieren",
-  headingAccent: "statt",
-  headingLine2: "wegwerfen.",
+  headingLine1: "Gartenunterhalt",
+  headingAccent: "mit",
+  headingLine2: "ruhiger Hand.",
   subcopy:
-    "Technische Hilfe aus einer Hand. Mit über 30 Jahren Erfahrung in Multimedia und IT verlängert Bolliger IT das Leben Ihrer Technik – ehrlich, persönlich, unabhängig.",
-  backgroundImageUrl: "/hero/hero-bit.jpeg",
-  primaryCtaLabel: "Kontaktieren Sie mich",
-  primaryCtaHref: "/kontakt",
-  secondaryCtaLabel: "Dienstleistungen ansehen",
-  secondaryCtaHref: "/dienstleistungen",
+    "Unkomplizierte Hilfe für Rasen, Hecken, Beete und saisonale Gartenarbeiten. Persönlich geplant, sauber umgesetzt und passend zu Ihrem Garten.",
+  backgroundImageUrl: "/hero/garden-hero.svg",
+  primaryCtaLabel: "Termin planen",
+  primaryCtaHref: "/buchung",
+  secondaryCtaLabel: "Kontakt aufnehmen",
+  secondaryCtaHref: "/kontakt",
   stats: [
-    { value: "30+", label: "Jahre Erfahrung" },
-    { value: "1:1", label: "Mensch zu Mensch" },
+    { value: "1:1", label: "vor Ort geplant" },
+    { value: "saisonal", label: "sinnvoll gepflegt" },
   ],
-  countdownEnabled: true,
-  countdownTitle: "Eröffnung August 2026",
+  countdownEnabled: false,
+  countdownTitle: "Online-Buchung folgt",
   countdownTargetMs: new Date(2026, 7, 15, 9, 0, 0).getTime(),
-  countdownStatusLabel: "Status",
-  countdownStatusText: "Werkstatt wird eingerichtet – Anfragen jetzt möglich",
+  countdownStatusLabel: "Hinweis",
+  countdownStatusText: "Termine aktuell per Telefon oder E-Mail",
 };
 
 const ABOUT_FALLBACK = {
-  headingLine1: "Ein Techniker.",
-  headingAccent: "Eine Werkstatt.",
-  headingLine3: "Volle Verantwortung.",
+  headingLine1: "Ein Garten.",
+  headingAccent: "Ein Plan.",
+  headingLine3: "Saubere Arbeit.",
   paragraphs: [
-    "Hinter Bolliger IT stehe ich, Roger Bolliger. Nach meiner Lehre als Audio-Video-Elektroniker bin ich 1998 in die IT gewechselt. Ich habe einige Jahre ein Informatikgeschäft geleitet, bis ich krankheitsbedingt kürzertreten musste.",
-    "Nach wie vor bin ich mit Herz und Seele technikbegeistert. Meine langjährige Erfahrung gebe ich gerne an meine Kunden weiter.",
+    "Gartenarbeit ist am besten, wenn sie zum Ort passt. Deshalb beginnt jeder Einsatz mit einem kurzen Blick auf Pflanzen, Wege, Rasen und den gewünschten Aufwand.",
+    "Ob ein einzelner Frühlingsputz, regelmässige Pflege oder ein Rückschnitt vor dem Winter: Die Arbeit bleibt überschaubar, persönlich und klar abgesprochen.",
   ],
-  photoUrl: "/roger-office.jpg",
-  photoAlt: "Roger Bolliger in seinem Büro bei Jactronic AG",
-  badgeInitials: "RB",
-  badgeName: "Roger Bolliger",
-  badgeRole: "Inhaber & Techniker",
-  ctaLabel: "Kontaktieren Sie mich",
-  ctaHref: "/kontakt",
-  note: "Antwort i. d. R. innert 24h",
+  photoUrl: "/hero/garden-about.svg",
+  photoAlt: "Gepflegter Garten mit Pflanzen und Werkzeug",
+  badgeInitials: "GP",
+  badgeName: "Gartenunterhalt Merian",
+  badgeRole: "Pflege, Schnitt & Saisonarbeiten",
+  ctaLabel: "Termin planen",
+  ctaHref: "/buchung",
+  note: "Unkomplizierte Abklärung",
 };
 
 const MARKETING_FALLBACK = {
-  servicesHeadingLine1: "Dienstleistungen von",
-  servicesHeadingAccent: "Bolliger IT",
-  servicesCtaLabel: "Alle Dienstleistungen ansehen",
-  stripHeadingLine1: "Technische Hilfe",
-  stripHeadingAccent: "aus einer Hand",
+  servicesHeadingLine1: "Pflege für",
+  servicesHeadingAccent: "Ihren Garten",
+  servicesCtaLabel: "Termin planen",
+  stripHeadingLine1: "Gartenarbeit",
+  stripHeadingAccent: "ohne Umwege",
   stripBody:
-    "Ein Ansprechpartner für alles, was piept, blinkt oder nicht mehr startet – vom Heim-WLAN bis zum Custom-Gaming-Rig.",
-  stripCtaLabel: "Kontaktieren Sie mich",
-  stripCtaHref: "/kontakt",
-  ctaHeadingLine1: "Etwas piept, blinkt oder",
-  ctaHeadingAccent: "startet nicht mehr",
+    "Sie sagen, was im Garten ansteht. Wir schauen es gemeinsam an und planen den passenden Einsatz.",
+  stripCtaLabel: "Termin planen",
+  stripCtaHref: "/buchung",
+  ctaHeadingLine1: "Bereit für einen",
+  ctaHeadingAccent: "gepflegten Garten",
   ctaBody:
-    "Schildern Sie mir Ihr Anliegen – ich melde mich i. d. R. innert 24 Stunden zurück.",
-  ctaLabel: "Kontaktieren Sie mich",
-  ctaHref: "/kontakt",
+    "Ob kleine Pflegearbeit oder grösserer Saison-Einsatz: Eine kurze Anfrage reicht für den ersten Schritt.",
+  ctaLabel: "Zur Buchung",
+  ctaHref: "/buchung",
 };
 
 const TESTIMONIALS_FALLBACK = {
-  headingLine1: "Was meine Kunden",
-  headingAccent: "über mich",
-  headingLine2: "sagen.",
+  headingLine1: "Gärten brauchen",
+  headingAccent: "Pflege",
+  headingLine2: "und Zeit.",
   items: [
     {
       quote:
-        "Ich beziehe schon mein ganzes Leben Technik und Support von Roger. Zuverlässig, kompetent – und jemand, dem man wirklich vertrauen kann.",
-      name: "Ikenna Nwalor",
-      role: "Privatkunde",
-      photoUrl: "/testimonials/ikenna-nwalor.png" as string | undefined,
+        "Die richtigen Arbeiten zur richtigen Zeit machen oft mehr aus als grosse Umbauten.",
+      name: "Saisonale Pflege",
+      role: "Rasen, Hecken, Beete",
+      photoUrl: undefined as string | undefined,
     },
-    { quote: "Irgendwer hat sicher bald was Positives zu berichten…", name: "Platzhalter", role: "KMU", photoUrl: undefined },
-    { quote: "Folgt sicher auch bald.", name: "Platzhalter", role: "Gaming-Kunde", photoUrl: undefined },
-    { quote: "Hier folgt bald eine weitere Stimme aus der Region.", name: "Platzhalter", role: "Privatkunde", photoUrl: undefined },
+    { quote: "Ein gepflegter Garten soll Freude machen, nicht zur dauernden Aufgabe werden.", name: "Unterhalt", role: "nach Bedarf", photoUrl: undefined },
+    { quote: "Vor Ort sieht man schnell, was wirklich nötig ist und was warten kann.", name: "Beratung", role: "persönlich", photoUrl: undefined },
   ],
 };
 
@@ -248,7 +248,7 @@ export function useSiteContent() {
     treuhand: val(c?.legal?.treuhand, fbImpressum.treuhand),
     footerTagline: val(
       c?.legal?.footerTagline,
-      "Ehrliche PC- und Geräte-Reparatur aus dem Aargau. Werkstatt-Eröffnung im August 2026.",
+      "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten.",
     ),
     footerLinks: arr(c?.legal?.footerLinks, [
       { label: "Datenschutz", href: "#" },
@@ -257,5 +257,36 @@ export function useSiteContent() {
     privacyNote: val(c?.legal?.privacyNote, fbPrivacyNote),
   };
 
-  return { loading, contact, opening, map, hero, about, homeServices, detailServices, marketing, pricing, offer, testimonials, legal };
+  const booking = {
+    eyebrow: val(c?.booking?.eyebrow, fbBooking.eyebrow),
+    title: val(c?.booking?.title, fbBooking.title),
+    intro: val(c?.booking?.intro, fbBooking.intro),
+    providerName: val(c?.booking?.providerName, fbBooking.providerName),
+    providerUrl: val(c?.booking?.providerUrl, fbBooking.providerUrl),
+    embedUrl: val(c?.booking?.embedUrl, fbBooking.embedUrl),
+    fallbackTitle: val(c?.booking?.fallbackTitle, fbBooking.fallbackTitle),
+    fallbackBody: val(c?.booking?.fallbackBody, fbBooking.fallbackBody),
+    primaryCtaLabel: val(c?.booking?.primaryCtaLabel, fbBooking.primaryCtaLabel),
+    primaryCtaHref: val(c?.booking?.primaryCtaHref, fbBooking.primaryCtaHref),
+    secondaryCtaLabel: val(c?.booking?.secondaryCtaLabel, fbBooking.secondaryCtaLabel),
+    secondaryCtaHref: val(c?.booking?.secondaryCtaHref, fbBooking.secondaryCtaHref),
+    notes: arr(c?.booking?.notes, [...fbBooking.notes]),
+  };
+
+  return {
+    loading,
+    contact,
+    opening,
+    map,
+    hero,
+    about,
+    homeServices,
+    detailServices,
+    marketing,
+    pricing,
+    offer,
+    testimonials,
+    legal,
+    booking,
+  };
 }

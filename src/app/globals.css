@@ -12,16 +12,16 @@
   --color-line: #e6e5de;
   --color-line-2: #efede6;
 
-  --color-blue: #1e96d4;
-  --color-blue-deep: #0f6fa3;
+  --color-blue: #6f8f55;
+  --color-blue-deep: #4f6f3f;
 
-  --color-orange: #ff7520;
-  --color-orange-soft: #ffede0;
+  --color-orange: #6f8f55;
+  --color-orange-soft: #eef4df;
 
   --color-navy: #233a47;
 
-  --color-btn: #233a47;
-  --color-btn-hover: #1a2e39;
+  --color-btn: #31523f;
+  --color-btn-hover: #254231;
 
   /* Fonts – distinct vars from next/font to avoid circular references in @theme */
   --font-sans: var(--font-geist-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -65,72 +65,6 @@
     background: var(--color-orange);
     color: #fff;
   }
-}
-
-/* Landing page – garden palette (scoped so sub-pages stay unchanged for now) */
-.theme-gartenunterhalt {
-  --color-bg: #f8faf8;
-  --color-bg-card: #ffffff;
-
-  --color-ink: #1e3324;
-  --color-ink-2: #3d5a45;
-  --color-ink-3: #6b8572;
-
-  --color-line: #e3ebe5;
-  --color-line-2: #eef4ef;
-
-  --color-blue: #2d6a4f;
-  --color-blue-deep: #1b4332;
-
-  --color-orange: #40916c;
-  --color-orange-soft: #d8f3dc;
-
-  --color-navy: #1e3324;
-  --color-btn: #1e3324;
-  --color-btn-hover: #152719;
-}
-
-.theme-gartenunterhalt ::selection {
-  background: var(--color-orange);
-  color: #fff;
-}
-
-.theme-gartenunterhalt .hero-scrim-mobile {
-  background: linear-gradient(
-    180deg,
-    rgba(14, 32, 20, 0.82) 0%,
-    rgba(14, 32, 20, 0.58) 48%,
-    rgba(14, 32, 20, 0.52) 100%
-  ) !important;
-}
-
-.theme-gartenunterhalt .hero-scrim-desktop {
-  background: linear-gradient(
-    100deg,
-    rgba(14, 32, 20, 0.72) 0%,
-    rgba(14, 32, 20, 0.45) 42%,
-    rgba(14, 32, 20, 0.15) 100%
-  ) !important;
-}
-
-.theme-gartenunterhalt .service-strip-band {
-  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #52b788 100%) !important;
-}
-
-.theme-gartenunterhalt .cta-band-bg {
-  background:
-    radial-gradient(85% 140% at 100% 0%, rgba(64, 145, 108, 0.52), transparent 48%),
-    radial-gradient(70% 120% at 0% 100%, rgba(82, 183, 136, 0.38), transparent 52%),
-    radial-gradient(55% 90% at 65% 50%, rgba(45, 106, 79, 0.18), transparent 55%) !important;
-}
-
-.theme-gartenunterhalt .countdown-status {
-  border-color: #cfe8d8 !important;
-  background: linear-gradient(180deg, #f3faf5 0%, #e8f5ec 100%) !important;
-}
-
-.theme-gartenunterhalt .service-card-icon {
-  color: #2d5016 !important;
 }
 
 /* Subtle infinite float used by accent chips */

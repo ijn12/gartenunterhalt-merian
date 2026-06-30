@@ -4,12 +4,7 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { Container, Label } from "./ui";
 import { useSiteContent } from "@/sanity/useSiteContent";
-
-const PAGE_LINKS = [
-  { label: "Hauptseite", href: "/" },
-  { label: "Dienstleistungen", href: "/dienstleistungen" },
-  { label: "Kontakt", href: "/kontakt" },
-];
+import { nav } from "@/lib/site";
 
 export function Footer() {
   const { contact, legal } = useSiteContent();
@@ -19,7 +14,7 @@ export function Footer() {
       <Container className="pb-10 pt-14">
         <div className="mb-12 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" aria-label="Gartenunterhalt Merian – zur Hauptseite" className="inline-block">
+            <Link href="/" aria-label="Gartenunterhalt Merian – zur Startseite" className="inline-block">
               <Logo className="h-10 w-auto" />
             </Link>
             <p className="mt-2 max-w-[18rem] text-sm leading-[1.55] text-ink-3">{legal.footerTagline}</p>
@@ -29,7 +24,7 @@ export function Footer() {
               Seiten
             </Label>
             <div className="flex flex-col gap-2.5">
-              {PAGE_LINKS.map((l) => (
+              {nav.map((l) => (
                 <Link
                   key={l.label}
                   href={l.href}
@@ -63,7 +58,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
           <div className="font-mono text-[11.5px] tracking-[0.04em] text-ink-3">
             © {new Date().getFullYear()}{" "}
-            <a href="https://www.gartenunterhalt-merian.ch" className="text-ink-2 hover:text-ink">
+            <a href={`https://${contact.website}`} className="text-ink-2 hover:text-ink">
               {contact.website}
             </a>
           </div>

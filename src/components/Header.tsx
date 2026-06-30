@@ -48,10 +48,6 @@ export function Header() {
     };
   }, [open]);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
@@ -66,7 +62,7 @@ export function Header() {
         className="relative z-[60] border-b border-line bg-bg"
       >
         <Container className="flex items-center justify-between gap-6 py-3.5">
-        <Link href="/" aria-label="Gartenunterhalt Merian – zur Hauptseite" className="shrink-0">
+        <Link href="/" aria-label="Gartenunterhalt Merian – zur Startseite" className="shrink-0">
           <Logo priority className="h-10 w-auto sm:h-11" />
         </Link>
 
@@ -90,8 +86,8 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <span className="hidden sm:inline-flex">
-            <PillButton href="/kontakt" size="sm" icon={false}>
-              Kontaktieren Sie mich
+            <PillButton href="/buchung" size="sm" icon={false}>
+              Termin planen
             </PillButton>
           </span>
 
@@ -164,8 +160,8 @@ export function Header() {
                     </Link>
                   ))}
                   <div className="mt-2 flex justify-end border-t border-line pt-4">
-                    <PillButton href="/kontakt" size="sm" icon={false}>
-                      Kontaktieren Sie mich
+                    <PillButton href="/buchung" size="sm" icon={false}>
+                      Termin planen
                     </PillButton>
                   </div>
                 </nav>

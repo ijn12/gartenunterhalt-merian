@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export const offerSection = defineType({
   name: "offerSection",
-  title: "Angebot (Dienstleistungen)",
+  title: "Angebot",
   type: "document",
   fields: [
     defineField({ name: "title", title: "Titel", type: "string", initialValue: "Exklusives Angebot" }),

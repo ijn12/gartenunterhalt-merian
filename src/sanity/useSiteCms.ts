@@ -12,7 +12,6 @@ export function useSiteCms() {
 
   useEffect(() => {
     if (!isSanityConfigured) {
-      setLoading(false);
       return;
     }
 

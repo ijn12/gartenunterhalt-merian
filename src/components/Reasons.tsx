@@ -34,10 +34,9 @@ export function Reasons() {
       <Container className="py-16 sm:py-20 lg:py-24">
         <Reveal className="mb-10 max-w-[48rem] sm:mb-12">
           <h2 className="text-[clamp(2.25rem,4.4vw,3.5rem)] font-medium leading-[1.02] tracking-[-0.03em]">
-            Die wichtigsten Gründe,
+            So bleibt Gartenunterhalt
             <br />
-            warum Sie sich für{" "}
-            <span className="font-serif italic text-ink-2">mich</span> entscheiden sollten.
+            <span className="font-serif italic text-ink-2">überschaubar</span> und persönlich.
           </h2>
         </Reveal>
 

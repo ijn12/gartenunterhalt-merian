@@ -3,13 +3,12 @@ type LogoProps = {
   priority?: boolean;
 };
 
-export function Logo({ className = "inline-block", priority: _priority = false }: LogoProps) {
+export function Logo({ className = "h-9 w-auto" }: LogoProps) {
   return (
     <span
-      className={`font-serif text-[1.35rem] leading-none tracking-[-0.02em] text-ink sm:text-[1.5rem] ${className}`}
+      className={`inline-flex items-center whitespace-nowrap font-serif text-[1.65rem] italic leading-none tracking-[-0.04em] text-ink ${className}`}
     >
-      Gartenunterhalt{" "}
-      <span className="italic text-ink-2">Merian</span>
+      Gartenunterhalt Merian
     </span>
   );
 }

@@ -8,7 +8,7 @@ type PageHeroProps = {
   image?: string;
 };
 
-export function PageHero({ title, subtitle, image = "/hero/dienstleistungen.svg" }: PageHeroProps) {
+export function PageHero({ title, subtitle, image = "/hero/garden-hero.svg" }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden">
       <div

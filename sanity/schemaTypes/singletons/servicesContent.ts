@@ -1,28 +1,28 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 const ICON_OPTIONS = [
-  { title: "Haus / Vor-Ort", value: "Home" },
-  { title: "Desktop / PC", value: "Desktop" },
-  { title: "Mobile / Handy", value: "Mobile" },
-  { title: "Gaming", value: "Gaming" },
-  { title: "Werkzeug / Reparatur", value: "Wrench" },
-  { title: "Herz / Beratung", value: "Heart" },
-  { title: "Box / Neugerät", value: "Box" },
-  { title: "Terminal / Linux", value: "Penguin" },
+  { title: "Haus / vor Ort", value: "Home" },
+  { title: "Werkzeug / Gartenarbeit", value: "Wrench" },
+  { title: "Herz / Pflege", value: "Heart" },
+  { title: "Box / Saisonarbeiten", value: "Box" },
+  { title: "Mobile / schnelle Anfrage", value: "Mobile" },
+  { title: "Desktop / neutral", value: "Desktop" },
+  { title: "Gaming / neutral", value: "Gaming" },
+  { title: "Terminal / neutral", value: "Penguin" },
 ];
 
 export const servicesContent = defineType({
   name: "servicesContent",
-  title: "Dienstleistungen",
+  title: "Gartenleistungen",
   type: "document",
   groups: [
     { name: "home", title: "Übersicht (Startseite)", default: true },
-    { name: "detail", title: "Detailseite" },
+    { name: "detail", title: "Optionale Details" },
   ],
   fields: [
     defineField({
       name: "homeServices",
-      title: "Service-Kacheln (Startseite)",
+      title: "Leistungs-Kacheln (Startseite)",
       type: "array",
       group: "home",
       of: [
@@ -46,7 +46,7 @@ export const servicesContent = defineType({
     }),
     defineField({
       name: "services",
-      title: "Detaillierte Dienstleistungen",
+      title: "Detaillierte Gartenleistungen",
       type: "array",
       group: "detail",
       of: [
@@ -80,5 +80,5 @@ export const servicesContent = defineType({
       ],
     }),
   ],
-  preview: { prepare: () => ({ title: "Dienstleistungen" }) },
+  preview: { prepare: () => ({ title: "Gartenleistungen" }) },
 });

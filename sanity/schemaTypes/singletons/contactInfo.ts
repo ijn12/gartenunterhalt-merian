@@ -45,7 +45,7 @@ export const contactInfo = defineType({
       title: "Titel Öffnungszeiten",
       type: "string",
       group: "hours",
-      initialValue: "Öffnungszeiten ab August 2026",
+      initialValue: "Termine nach Vereinbarung",
     }),
     defineField({
       name: "openingHours",
@@ -64,7 +64,7 @@ export const contactInfo = defineType({
         }),
       ],
     }),
-    defineField({ name: "openingNote", title: "Hinweis (z. B. Sonntag geschlossen)", type: "string", group: "hours" }),
+    defineField({ name: "openingNote", title: "Hinweis", type: "string", group: "hours" }),
 
     defineField({
       name: "holidaysTitle",

@@ -12,7 +12,7 @@ export function ServiceCard({ s }: { s: ServiceItem }) {
   const Icon = serviceIcons[s.icon] ?? serviceIcons.Home;
   return (
     <div className="group flex h-full flex-col gap-4 rounded-[22px] border border-line bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-[#d9d6cc] hover:shadow-[0_24px_50px_-28px_rgba(0,0,0,0.2)]">
-      <div className="service-card-icon flex size-11 items-center justify-center rounded-xl bg-orange-soft text-[#7a4400] transition-transform duration-200 group-hover:scale-105">
+      <div className="flex size-11 items-center justify-center rounded-xl bg-orange-soft text-[#7a4400] transition-transform duration-200 group-hover:scale-105">
         <Icon className="size-[22px] stroke-[1.5]" aria-hidden />
       </div>
       <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.02em]">{s.title}</h3>
@@ -92,7 +92,7 @@ export function Services() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <PillButton href="/dienstleistungen" variant="ghost" size="md">
+            <PillButton href="/buchung" variant="ghost" size="md">
               {marketing.servicesCtaLabel}
             </PillButton>
           </Reveal>

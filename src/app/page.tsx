@@ -1,31 +1,25 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { ServiceStrip } from "@/components/ServiceStrip";
 import { Services } from "@/components/Services";
-import { Stories } from "@/components/cms/Stories";
 import { Reasons } from "@/components/Reasons";
-import { Testimonials } from "@/components/Testimonials";
-import { Values } from "@/components/Values";
+import { GardenGallery } from "@/components/GardenGallery";
 import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="theme-gartenunterhalt">
+    <>
       <Header />
       <main>
         <Hero />
         <About />
-        <ServiceStrip />
         <Services />
+        <GardenGallery />
         <Reasons />
-        <Stories />
-        <Testimonials />
-        <Values />
         <CtaBand />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
