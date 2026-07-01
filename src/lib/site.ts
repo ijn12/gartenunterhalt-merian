@@ -1,19 +1,19 @@
 import type { ServiceIconName } from "@/components/icons";
 
 export const contact = {
-  company: "Gartenunterhalt Merian",
-  owner: "Merian",
-  street: "Adresse folgt",
-  zip: "0000",
-  city: "Region Aargau",
+  company: "Gärtnerei Merian",
+  owner: "Timon Merian",
+  street: "Region Luzern",
+  zip: "",
+  city: "",
   country: "Schweiz",
-  phone: "Telefon folgt",
-  phoneHref: "tel:+41000000000",
-  mobile: "Mobile folgt",
-  mobileHref: "tel:+41000000000",
-  email: "info@gartenunterhalt-merian.ch",
-  emailHref: "mailto:info@gartenunterhalt-merian.ch",
-  website: "www.gartenunterhalt-merian.ch",
+  phone: "078 685 18 99",
+  phoneHref: "tel:+41786851899",
+  mobile: "078 685 18 99",
+  mobileHref: "tel:+41786851899",
+  email: "timonmerian@gmail.com",
+  emailHref: "mailto:timonmerian@gmail.com",
+  website: "www.gärtnerei-merian.ch",
 } as const;
 
 export type ServiceItem = {
@@ -28,81 +28,80 @@ export type ServiceDetail = Omit<ServiceItem, "desc"> & {
   paragraphs: string[];
 };
 
-/** Home page – compact gardening service overview. */
+/** Home page – service overview taken from the flyer. */
 export const homeServices: ServiceItem[] = [
   {
-    icon: "Home",
-    title: "Gartenunterhalt",
-    desc: "Regelmässige Pflege für private Gärten: jäten, schneiden, aufräumen und kleine Arbeiten rund ums Grün.",
+    icon: "Cleanup",
+    title: "Gartenreinigung",
+    desc: "Garten von Laub, Unkraut und abgebrochenen Ästen befreien – damit alles wieder gepflegt und aufgeräumt wirkt.",
   },
   {
-    icon: "Wrench",
-    title: "Hecken & Sträucher",
-    desc: "Saubere Formschnitte, Rückschnitte und saisonale Pflege, damit Wege, Beete und Sitzplätze wieder Luft bekommen.",
+    icon: "Planting",
+    title: "Bepflanzung",
+    desc: "Saisonale Bepflanzung von Beeten: passende Pflanzen setzen und bestehende Beete auffrischen.",
   },
   {
-    icon: "Heart",
-    title: "Bepflanzung & Pflege",
-    desc: "Neue Pflanzen setzen, bestehende Beete auffrischen und den Garten passend zur Jahreszeit vorbereiten.",
+    icon: "Winter",
+    title: "Wintervorbereitung",
+    desc: "Rückschnitt von Hecken und Sträuchern, damit der Garten gut durch die kalte Jahreszeit kommt.",
   },
   {
-    icon: "Box",
-    title: "Saisonarbeiten",
-    desc: "Frühlingsputz, Herbstschnitt, Laub, Grüngut und alles, was vor oder nach der Gartensaison anfällt.",
+    icon: "Tree",
+    title: "Baumpflege",
+    desc: "Rückschnitt, Formgebung und Jungbaumpflege – fachgerecht und mit Blick auf Gesundheit und Wuchs.",
   },
   {
-    icon: "Mobile",
+    icon: "Lawn",
     title: "Rasenpflege",
     desc: "Mähen, Kanten schneiden und einfache Pflegearbeiten für eine gepflegte, nutzbare Rasenfläche.",
   },
   {
-    icon: "Heart",
-    title: "Beratung vor Ort",
-    desc: "Gemeinsam anschauen, was nötig ist, realistisch priorisieren und eine unkomplizierte Lösung finden.",
+    icon: "Advice",
+    title: "Gratis Besichtigung",
+    desc: "Vor Ort und unverbindlich gemeinsam anschauen, was nötig ist, und eine passende Lösung finden.",
   },
 ];
 
-/** Optional detail content, kept for CMS compatibility and future service sections. */
+/** The four core services from the flyer, shown as photo cards on the home page. */
 export const services: ServiceDetail[] = [
   {
-    icon: "Heart",
-    title: "Gartenunterhalt nach Bedarf",
+    icon: "Cleanup",
+    title: "Gartenreinigung",
     paragraphs: [
-      "Ob einmaliger Einsatz oder wiederkehrende Pflege: Der Garten wird zuerst vor Ort angeschaut, damit Aufwand und Prioritäten klar sind.",
-      "Danach entsteht ein einfacher Vorschlag für die nächsten Schritte.",
+      "Garten von Laub, Unkraut und abgebrochenen Ästen befreien – damit alles wieder gepflegt und aufgeräumt wirkt.",
     ],
-    image: "/hero/garden-gallery-1.svg",
+    image: "/photos/garden-path.jpg",
   },
   {
-    icon: "Wrench",
-    title: "Schnittarbeiten",
+    icon: "Winter",
+    title: "Wintervorbereitung",
     paragraphs: [
-      "Hecken, Sträucher und kleinere Gehölze werden mit Blick auf Form, Gesundheit und Saison gepflegt.",
+      "Rückschnitt von Hecken und Sträuchern, damit der Garten gut durch die kalte Jahreszeit kommt.",
     ],
-    image: "/hero/garden-gallery-2.svg",
+    image: "/photos/tree-pruning.jpg",
   },
   {
-    icon: "Home",
-    title: "Saisonale Einsätze",
-    paragraphs: [
-      "Frühling und Herbst bringen oft viel Arbeit auf einmal. Ein geplanter Einsatz hilft, den Garten rechtzeitig bereit zu machen.",
-    ],
-    image: "/hero/garden-gallery-3.svg",
-  },
-  {
-    icon: "Box",
+    icon: "Planting",
     title: "Bepflanzung",
     paragraphs: [
-      "Beete auffrischen, neue Pflanzen einsetzen und vorhandene Pflanzen so pflegen, dass sie zum Standort passen.",
+      "Saisonale Bepflanzung von Beeten: passende Pflanzen setzen und bestehende Beete auffrischen.",
     ],
-    image: "/hero/garden-about.svg",
+    image: "/photos/spring-flowers.jpg",
+  },
+  {
+    icon: "Tree",
+    title: "Baumpflege",
+    paragraphs: [
+      "Rückschnitt, Formgebung und Jungbaumpflege – fachgerecht und mit Blick auf Gesundheit und Wuchs.",
+    ],
+    image: "/photos/magnolia.jpg",
   },
 ];
 
 export const offer = {
-  title: "Erster Garten-Check",
-  body: "Bei neuen Anfragen schauen wir gemeinsam an, welche Arbeiten wirklich sinnvoll sind und welche Priorität haben.",
-  deadline: "Unverbindlich anfragen",
+  title: "Erster Einsatz nicht zufrieden? Sie zahlen nichts.",
+  body: "So einfach ist das. Timon steht mit seinem Namen für sauber ausgeführte Gartenarbeit – überzeugen Sie sich beim ersten Einsatz ganz ohne Risiko.",
+  deadline: "Zufriedenheitsversprechen",
 } as const;
 
 export const openingHours: { day: string; time: string }[] = [
@@ -130,14 +129,30 @@ export const wegpauschalen: { label: string; price: string }[] = [
   { label: "Region", price: "nach Vereinbarung" },
 ];
 
+/** "So einfach geht's" – the three steps from the flyer. */
+export const steps: { title: string; body: string }[] = [
+  {
+    title: "Kontakt aufnehmen",
+    body: "Anruf, E-Mail oder über die Website – melden Sie sich unkompliziert.",
+  },
+  {
+    title: "Gratis Besichtigung",
+    body: "Vor Ort und unverbindlich schauen wir gemeinsam an, was Ihr Garten braucht.",
+  },
+  {
+    title: "Ausführung",
+    body: "Termin nach Wunsch – die Arbeit wird sauber und zuverlässig erledigt.",
+  },
+];
+
 export const reasons: { title: string; body: string }[] = [
   {
     title: "Persönlich geplant",
-    body: "Jeder Garten ist anders. Deshalb beginnt die Arbeit mit einem kurzen Gespräch und einem Blick vor Ort.",
+    body: "Jeder Garten ist ein kleines Projekt. Deshalb beginnt die Arbeit mit einem Blick vor Ort und einem kurzen Gespräch.",
   },
   {
-    title: "Saisonal sinnvoll",
-    body: "Schnitt, Pflege und Pflanzung werden so geplant, dass sie zur Jahreszeit und zum Zustand des Gartens passen.",
+    title: "Mit Sorgfalt & Freude",
+    body: "Seit über fünf Jahren kümmert sich Timon um Gärten aller Art – mit Erfahrung, Sorgfalt und echter Freude an der Arbeit.",
   },
   {
     title: "Sauber abgeschlossen",
@@ -146,27 +161,27 @@ export const reasons: { title: string; body: string }[] = [
 ];
 
 export const values: { title: string; body: string }[] = [
-  { title: "Ruhig", body: "Guter Gartenunterhalt muss nicht kompliziert sein: anschauen, planen, sauber umsetzen." },
+  { title: "Sorgfältig", body: "Jeder Garten ist ein kleines Projekt, dem Timon mit Sorgfalt und Freude begegnet." },
   { title: "Natürlich", body: "Pflanzen, Boden und Saison geben den Takt vor." },
   { title: "Verlässlich", body: "Klare Absprachen und realistische Termine sind wichtiger als leere Versprechen." },
 ];
 
 export const impressum = {
-  bank: "Valiant Bank, Schöftland",
-  hosting: "Netzone, Schöftland – Hosting in der Schweiz",
-  responsible: "Merian",
-  privacyOfficer: "Merian",
-  treuhand: "Savita Treuhand",
+  bank: "Angaben folgen",
+  hosting: "Hosting in der Schweiz",
+  responsible: "Timon Merian",
+  privacyOfficer: "Timon Merian",
+  treuhand: "Angaben folgen",
 } as const;
 
 export const privacyNote =
   "Diese Angaben dienen der Kontaktaufnahme und Terminabklärung. Bitte senden Sie keine vertraulichen Informationen über das Formular. Sie können sich jederzeit auch direkt per Telefon oder E-Mail melden.";
 
 export const map = {
-  lat: 47.2936,
-  lng: 8.0079,
-  zoom: 14,
-  label: "Gartenunterhalt Merian · Region Aargau",
+  lat: 47.0502,
+  lng: 8.3093,
+  zoom: 11,
+  label: "Gärtnerei Merian · Region Luzern",
   embedUrl: "",
 } as const;
 
@@ -174,19 +189,19 @@ export const booking = {
   eyebrow: "Termin buchen",
   title: "Gartenarbeit direkt planen.",
   intro:
-    "Die Online-Buchung wird hier eingebunden, sobald der Anbieter feststeht. Bis dahin können Sie Ihren Wunschtermin direkt per Telefon oder E-Mail anfragen.",
+    "Die Online-Buchung wird hier eingebunden, sobald das Buchungstool bereitsteht. Bis dahin können Sie Ihren Wunschtermin direkt per Telefon oder E-Mail anfragen.",
   providerName: "Online-Buchung",
   providerUrl: "",
   embedUrl: "",
-  fallbackTitle: "Online-Buchung folgt",
+  fallbackTitle: "Online-Buchung folgt in Kürze",
   fallbackBody:
-    "Wir bereiten eine direkte Terminbuchung vor. Für dringende Einsätze oder erste Abklärungen melden Sie sich bitte über Kontakt.",
+    "Ein Tool zum Buchen von freien Terminen ist in Vorbereitung. Für dringende Einsätze oder eine gratis Besichtigung melden Sie sich bitte direkt per Telefon oder E-Mail.",
   primaryCtaLabel: "Kontakt aufnehmen",
   primaryCtaHref: "/kontakt",
   secondaryCtaLabel: "Anrufen",
   secondaryCtaHref: contact.phoneHref,
   notes: [
-    "Kurze Beschreibung des Gartens oder der gewünschten Arbeiten hilft bei der Planung.",
+    "Eine kurze Beschreibung des Gartens oder der gewünschten Arbeiten hilft bei der Planung.",
     "Fotos können später per E-Mail nachgereicht werden.",
     "Termine hängen von Wetter, Saison und Verfügbarkeit ab.",
   ],

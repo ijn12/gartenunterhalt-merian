@@ -5,7 +5,7 @@ import { ImpressumContent } from "./ImpressumContent";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und rechtliche Angaben zu Gartenunterhalt Merian.",
+  description: "Impressum und rechtliche Angaben zu Gärtnerei Merian.",
 };
 
 export default function ImpressumPage() {

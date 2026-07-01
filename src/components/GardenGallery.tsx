@@ -4,19 +4,19 @@ import { Reveal } from "./Reveal";
 
 const galleryItems = [
   {
-    src: "/hero/garden-gallery-1.svg",
-    title: "Gepflegte Beete",
-    body: "Pflanzen, Erde und Kanten werden so gepflegt, dass der Garten ruhig und aufgeräumt wirkt.",
+    src: "/photos/garden-path.jpg",
+    title: "Gepflegte Aussenräume",
+    body: "Beete, Wege und Bepflanzung werden so gepflegt, dass der Garten ruhig und aufgeräumt wirkt.",
   },
   {
-    src: "/hero/garden-gallery-2.svg",
-    title: "Saubere Wege",
-    body: "Schnittgut, Laub und kleine Wildwuchsflächen werden nach dem Einsatz ordentlich hinterlassen.",
+    src: "/photos/spring-flowers.jpg",
+    title: "Saisonale Bepflanzung",
+    body: "Passende Pflanzen zur richtigen Zeit setzen und bestehende Beete auffrischen.",
   },
   {
-    src: "/hero/garden-gallery-3.svg",
-    title: "Saison im Blick",
-    body: "Frühling, Sommer und Herbst brauchen unterschiedliche Pflege. Genau danach wird geplant.",
+    src: "/photos/tree-pruning.jpg",
+    title: "Baum- & Schnittarbeiten",
+    body: "Rückschnitt, Formgebung und Baumpflege – fachgerecht und mit Blick auf die Saison.",
   },
 ];
 

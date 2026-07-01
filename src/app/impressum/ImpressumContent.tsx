@@ -9,7 +9,7 @@ export function ImpressumContent() {
 
   const rows: { label: string; value: React.ReactNode }[] = [
     {
-      label: "Adresse",
+      label: "Inhaber",
       value: (
         <>
           {contact.company}
@@ -17,23 +17,21 @@ export function ImpressumContent() {
           {contact.owner}
           <br />
           {contact.street}
-          <br />
-          {contact.zip} {contact.city}
+          {contact.city ? (
+            <>
+              <br />
+              {contact.zip} {contact.city}
+            </>
+          ) : null}
         </>
       ),
     },
     {
       label: "Telefon",
       value: (
-        <>
-          <a href={contact.phoneHref} className="hover:text-ink">
-            {contact.phone}
-          </a>
-          <br />
-          <a href={contact.mobileHref} className="hover:text-ink">
-            {contact.mobile}
-          </a>
-        </>
+        <a href={contact.phoneHref} className="hover:text-ink">
+          {contact.phone}
+        </a>
       ),
     },
     {
@@ -53,7 +51,7 @@ export function ImpressumContent() {
 
   return (
     <main>
-      <PageHero image="/hero/impressum.svg" title="Impressum" subtitle={legal.impressumSubtitle} />
+      <PageHero image="/photos/magnolia.jpg" title="Impressum" subtitle={legal.impressumSubtitle} />
       <section className="bg-bg">
         <Container className="py-16 sm:py-20">
           <dl className="max-w-[44rem] overflow-hidden rounded-2xl border border-line bg-white">

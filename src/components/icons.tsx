@@ -1,13 +1,13 @@
 import type { SVGProps } from "react";
 import {
-  Gamepad2,
-  HeartHandshake,
-  MapPinHouse,
-  Monitor,
-  Package,
-  Smartphone,
-  Terminal,
-  Wrench,
+  Flower2,
+  Leaf,
+  MessageCircle,
+  Scissors,
+  Sprout,
+  Sun,
+  TreeDeciduous,
+  Trees,
   type LucideIcon,
 } from "lucide-react";
 
@@ -26,14 +26,14 @@ export const ArrowRight = (props: IconProps) => (
 );
 
 export const serviceIcons = {
-  Home: MapPinHouse,
-  Desktop: Monitor,
-  Mobile: Smartphone,
-  Gaming: Gamepad2,
-  Wrench: Wrench,
-  Heart: HeartHandshake,
-  Box: Package,
-  Penguin: Terminal,
+  Cleanup: Leaf,
+  Planting: Flower2,
+  Winter: Scissors,
+  Tree: TreeDeciduous,
+  Lawn: Sprout,
+  Advice: MessageCircle,
+  Season: Sun,
+  Hedge: Trees,
 } as const satisfies Record<string, LucideIcon>;
 
 export type ServiceIconName = keyof typeof serviceIcons;

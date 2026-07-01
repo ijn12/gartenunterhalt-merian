@@ -1,6 +1,6 @@
-# Gartenunterhalt Merian Website
+# Gärtnerei Merian Website
 
-A small, responsive marketing site for **Gartenunterhalt Merian**. The site is intentionally lean: a landing page, a contact page, a booking page for a future third-party provider, and an impressum.
+A small, responsive marketing site for **Gärtnerei Merian** (Timon Merian) – Gartenpflege in der Region Luzern. The site is intentionally lean: a landing page, a contact page, a booking page for a future third-party provider, and an impressum. Colours and imagery follow the Gärtnerei Merian flyer: forest green + lavender accents.
 
 ## Tech Stack
 
@@ -36,9 +36,19 @@ npm run lint
 
 ## Editing Content
 
-- Shared fallback content lives in `src/lib/site.ts`.
-- Optional CMS fallbacks are merged in `src/sanity/useSiteContent.ts`.
-- Booking provider settings can be edited in Sanity under `Buchung`, or in `booking` inside `src/lib/site.ts`.
-- Temporary SVG placeholders live in `public/hero/`; replace them with real garden photos when available.
+The site is currently **code-driven** – all copy lives in code, not a CMS:
 
-Before launch, replace placeholder contact details, domain, legal details, and booking provider URLs.
+- Primary content: `src/lib/site.ts` (contact, services, steps, guarantee, booking, legal).
+- Section defaults (hero, about, marketing, testimonials): the `*_FALLBACK` objects in `src/sanity/useSiteContent.ts`.
+- Photos live in `public/photos/`, decorative lavender illustrations in `public/illustrations/`.
+- Booking: set `booking.embedUrl` in `src/lib/site.ts` to the third-party booking tool's embed URL and the `/buchung` page will render it automatically.
+
+### Sanity CMS
+
+The site is connected to the dedicated Sanity project **`0f90qi1t` (gardener-website)**, set in `.env.local`. That dataset is currently **empty**, so every field falls back to the code content above – the site looks the same whether or not the CMS has data. As soon as content is entered in the Studio (`/studio`), those values override the matching code fallbacks.
+
+- Studio: run `npm run dev` and open `/studio`, or `npm run sanity`.
+- CORS origins are configured for `http://localhost:3000/3001/3333`. **Before launch, add the production domain** in the Sanity manage console (or `npx sanity cors add https://<domain>`), otherwise the live site can't read CMS edits.
+- The old demo content that shipped with the duplicated project has been wiped.
+
+Before launch, confirm contact details, domain, and legal details in `src/lib/site.ts`.

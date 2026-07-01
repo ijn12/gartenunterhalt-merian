@@ -4,11 +4,11 @@ import { Container } from "./ui";
 type PageHeroProps = {
   title: ReactNode;
   subtitle?: ReactNode;
-  /** Background image path (sample images live in /public/hero – replace with photos). */
+  /** Background image path (garden photos live in /public/photos). */
   image?: string;
 };
 
-export function PageHero({ title, subtitle, image = "/hero/garden-hero.svg" }: PageHeroProps) {
+export function PageHero({ title, subtitle, image = "/photos/garden-path.jpg" }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden">
       <div
@@ -21,7 +21,7 @@ export function PageHero({ title, subtitle, image = "/hero/garden-hero.svg" }: P
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(100deg, rgba(8,18,26,0.82) 0%, rgba(8,18,26,0.55) 50%, rgba(8,18,26,0.32) 100%)",
+            "linear-gradient(100deg, rgba(18,30,14,0.84) 0%, rgba(18,30,14,0.58) 50%, rgba(18,30,14,0.32) 100%)",
         }}
       />
       <Container className="relative pb-16 pt-16 sm:pb-20 sm:pt-24">

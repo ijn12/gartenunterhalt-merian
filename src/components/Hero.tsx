@@ -23,7 +23,7 @@ export function Hero() {
         className="absolute inset-0 -z-10 lg:hidden"
         style={{
           background:
-            "linear-gradient(180deg, rgba(8,18,26,0.82) 0%, rgba(8,18,26,0.58) 48%, rgba(8,18,26,0.52) 100%)",
+            "linear-gradient(180deg, rgba(18,30,14,0.84) 0%, rgba(18,30,14,0.6) 48%, rgba(18,30,14,0.54) 100%)",
         }}
       />
       {/* Desktop: lighter left-to-right scrim for copy on the dark side */}
@@ -32,7 +32,7 @@ export function Hero() {
         className="absolute inset-0 -z-10 hidden lg:block"
         style={{
           background:
-            "linear-gradient(100deg, rgba(8,18,26,0.72) 0%, rgba(8,18,26,0.45) 42%, rgba(8,18,26,0.15) 100%)",
+            "linear-gradient(100deg, rgba(18,30,14,0.78) 0%, rgba(18,30,14,0.5) 42%, rgba(18,30,14,0.16) 100%)",
         }}
       />
 
@@ -89,7 +89,7 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: countdown card */}
+        {/* Right: countdown card (only when enabled) */}
         {hero.countdownEnabled && (
           <div>
             <OpeningCountdown

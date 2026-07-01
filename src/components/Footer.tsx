@@ -14,7 +14,7 @@ export function Footer() {
       <Container className="pb-10 pt-14">
         <div className="mb-12 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" aria-label="Gartenunterhalt Merian – zur Startseite" className="inline-block">
+            <Link href="/" aria-label="Gärtnerei Merian – zur Startseite" className="inline-block">
               <Logo className="h-10 w-auto" />
             </Link>
             <p className="mt-2 max-w-[18rem] text-sm leading-[1.55] text-ink-3">{legal.footerTagline}</p>
@@ -37,13 +37,17 @@ export function Footer() {
           </div>
           <div>
             <Label as="div" className="mb-4">
-              Adresse
+              Kontakt
             </Label>
             <div className="flex flex-col gap-2.5 text-sm text-ink-2">
               <span>
                 {contact.street}
-                <br />
-                {contact.zip} {contact.city}
+                {contact.city ? (
+                  <>
+                    <br />
+                    {contact.zip} {contact.city}
+                  </>
+                ) : null}
               </span>
               <a href={contact.phoneHref} className="transition-colors hover:text-ink">
                 {contact.phone}

@@ -6,7 +6,7 @@ import { KontaktContent } from "./KontaktContent";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt zu Gartenunterhalt Merian für Schnittarbeiten, Rasenpflege und saisonale Gartenarbeiten – per E-Mail, Telefon oder Kontaktformular.",
+    "Kontakt zu Gärtnerei Merian für Gartenreinigung, Bepflanzung, Baumpflege und saisonale Gartenarbeiten – per E-Mail, Telefon oder Kontaktformular.",
 };
 
 export default function KontaktPage() {

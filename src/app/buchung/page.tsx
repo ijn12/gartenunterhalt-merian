@@ -6,7 +6,7 @@ import { BuchungContent } from "./BuchungContent";
 export const metadata: Metadata = {
   title: "Buchung",
   description:
-    "Termin bei Gartenunterhalt Merian für Schnittarbeiten, Rasenpflege oder saisonale Gartenarbeiten direkt planen oder anfragen.",
+    "Termin bei Gärtnerei Merian für Gartenreinigung, Bepflanzung, Baumpflege oder saisonale Gartenarbeiten direkt planen oder anfragen.",
 };
 
 export default function BuchungPage() {

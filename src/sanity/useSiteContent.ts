@@ -30,19 +30,19 @@ function arr<T>(cms: T[] | null | undefined, fallback: T[]): T[] {
 }
 
 const HERO_FALLBACK = {
-  headingLine1: "Gartenunterhalt",
+  headingLine1: "Gärten gepflegt",
   headingAccent: "mit",
-  headingLine2: "ruhiger Hand.",
+  headingLine2: "Sorgfalt & Freude.",
   subcopy:
-    "Unkomplizierte Hilfe für Rasen, Hecken, Beete und saisonale Gartenarbeiten. Persönlich geplant, sauber umgesetzt und passend zu Ihrem Garten.",
-  backgroundImageUrl: "/hero/garden-hero.svg",
-  primaryCtaLabel: "Termin planen",
-  primaryCtaHref: "/buchung",
-  secondaryCtaLabel: "Kontakt aufnehmen",
-  secondaryCtaHref: "/kontakt",
+    "Gärtnerei Merian kümmert sich um Gärten aller Art in der Region Luzern: Gartenreinigung, Bepflanzung, Wintervorbereitung und Baumpflege – persönlich geplant und sauber umgesetzt.",
+  backgroundImageUrl: "/photos/garden-path.jpg",
+  primaryCtaLabel: "Kontaktieren Sie mich",
+  primaryCtaHref: "/kontakt",
+  secondaryCtaLabel: "Termin planen",
+  secondaryCtaHref: "/buchung",
   stats: [
-    { value: "1:1", label: "vor Ort geplant" },
-    { value: "saisonal", label: "sinnvoll gepflegt" },
+    { value: "5+ Jahre", label: "Erfahrung im Garten" },
+    { value: "Gratis", label: "Besichtigung vor Ort" },
   ],
   countdownEnabled: false,
   countdownTitle: "Online-Buchung folgt",
@@ -52,27 +52,27 @@ const HERO_FALLBACK = {
 };
 
 const ABOUT_FALLBACK = {
-  headingLine1: "Ein Garten.",
-  headingAccent: "Ein Plan.",
-  headingLine3: "Saubere Arbeit.",
+  headingLine1: "Über mich:",
+  headingAccent: "Timon Merian,",
+  headingLine3: "Ihr Gärtner.",
   paragraphs: [
-    "Gartenarbeit ist am besten, wenn sie zum Ort passt. Deshalb beginnt jeder Einsatz mit einem kurzen Blick auf Pflanzen, Wege, Rasen und den gewünschten Aufwand.",
-    "Ob ein einzelner Frühlingsputz, regelmässige Pflege oder ein Rückschnitt vor dem Winter: Die Arbeit bleibt überschaubar, persönlich und klar abgesprochen.",
+    "Ich bin Timon Merian und kümmere mich seit über fünf Jahren um Gärten aller Art in der Region Luzern.",
+    "Jeder Garten ist für mich ein kleines Projekt, dem ich mit Sorgfalt und Freude begegne.",
   ],
-  photoUrl: "/hero/garden-about.svg",
-  photoAlt: "Gepflegter Garten mit Pflanzen und Werkzeug",
-  badgeInitials: "GP",
-  badgeName: "Gartenunterhalt Merian",
-  badgeRole: "Pflege, Schnitt & Saisonarbeiten",
-  ctaLabel: "Termin planen",
-  ctaHref: "/buchung",
-  note: "Unkomplizierte Abklärung",
+  photoUrl: "/photos/portrait-timon.png",
+  photoAlt: "Timon Merian, Gärtnerei Merian",
+  badgeInitials: "TM",
+  badgeName: "Timon Merian",
+  badgeRole: "Gärtnerei Merian",
+  ctaLabel: "Gratis Besichtigung",
+  ctaHref: "/kontakt",
+  note: "Unverbindlich & kostenlos",
 };
 
 const MARKETING_FALLBACK = {
-  servicesHeadingLine1: "Pflege für",
+  servicesHeadingLine1: "Alles rund um",
   servicesHeadingAccent: "Ihren Garten",
-  servicesCtaLabel: "Termin planen",
+  servicesCtaLabel: "Gratis Besichtigung",
   stripHeadingLine1: "Gartenarbeit",
   stripHeadingAccent: "ohne Umwege",
   stripBody:
@@ -82,9 +82,9 @@ const MARKETING_FALLBACK = {
   ctaHeadingLine1: "Bereit für einen",
   ctaHeadingAccent: "gepflegten Garten",
   ctaBody:
-    "Ob kleine Pflegearbeit oder grösserer Saison-Einsatz: Eine kurze Anfrage reicht für den ersten Schritt.",
-  ctaLabel: "Zur Buchung",
-  ctaHref: "/buchung",
+    "Ob Gartenreinigung, Bepflanzung oder Baumpflege: Eine kurze Anfrage reicht für den ersten Schritt. Ich würde mich riesig freuen.",
+  ctaLabel: "Kontakt aufnehmen",
+  ctaHref: "/kontakt",
 };
 
 const TESTIMONIALS_FALLBACK = {
@@ -125,7 +125,7 @@ export function useSiteContent() {
   };
 
   const opening = {
-    title: val(c?.contact?.openingTitle, "Öffnungszeiten ab August 2026"),
+    title: val(c?.contact?.openingTitle, "Erreichbarkeit"),
     hours: arr(c?.contact?.openingHours, fbOpeningHours),
     note: val(c?.contact?.openingNote, fbOpeningNote),
     holidaysTitle: val(c?.contact?.holidaysTitle, "Geplante Ferien (geschlossen)"),
@@ -174,7 +174,7 @@ export function useSiteContent() {
 
   const homeServices = arr(
     c?.services?.homeServices?.map((s) => ({
-      icon: (s.icon ?? "Home") as ServiceIconName,
+      icon: (s.icon ?? "Cleanup") as ServiceIconName,
       title: s.title ?? "",
       desc: s.desc ?? "",
     })),
@@ -183,7 +183,7 @@ export function useSiteContent() {
 
   const detailServices = arr(
     c?.services?.services?.map((s) => ({
-      icon: (s.icon ?? "Heart") as ServiceIconName,
+      icon: (s.icon ?? "Cleanup") as ServiceIconName,
       title: s.title ?? "",
       image: s.imageUrl ?? "",
       paragraphs: s.paragraphs ?? [],
@@ -220,7 +220,7 @@ export function useSiteContent() {
     title: val(c?.offer?.title, fbOffer.title),
     body: val(c?.offer?.body, fbOffer.body),
     deadline: val(c?.offer?.deadline, fbOffer.deadline),
-    ctaLabel: val(c?.offer?.ctaLabel, "Kostenvoranschlag anfragen"),
+    ctaLabel: val(c?.offer?.ctaLabel, "Gratis Besichtigung"),
     ctaHref: val(c?.offer?.ctaHref, "/kontakt"),
   };
 
@@ -248,7 +248,7 @@ export function useSiteContent() {
     treuhand: val(c?.legal?.treuhand, fbImpressum.treuhand),
     footerTagline: val(
       c?.legal?.footerTagline,
-      "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten.",
+      "Gärten aller Art – gepflegt mit Sorgfalt und Freude in der Region Luzern.",
     ),
     footerLinks: arr(c?.legal?.footerLinks, [
       { label: "Datenschutz", href: "#" },

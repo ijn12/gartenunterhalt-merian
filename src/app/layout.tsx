@@ -24,41 +24,41 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-const siteUrl = "https://www.gartenunterhalt-merian.ch";
+const siteUrl = "https://www.xn--grtnerei-merian-2ob.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
-    template: "%s · Gartenunterhalt Merian",
+    default: "Gärtnerei Merian – Gartenpflege in Luzern",
+    template: "%s · Gärtnerei Merian",
   },
   description:
-    "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten. Unkompliziert geplant, sauber umgesetzt und direkt buchbar.",
+    "Gärtnerei Merian von Timon Merian: Gartenreinigung, Bepflanzung, Wintervorbereitung und Baumpflege in der Region Luzern. Persönlich geplant, sauber umgesetzt.",
   keywords: [
-    "Gartenunterhalt Merian",
-    "Gartenunterhalt",
-    "Rasenpflege",
+    "Gärtnerei Merian",
+    "Timon Merian",
+    "Gartenpflege Luzern",
+    "Gärtner Luzern",
+    "Gartenreinigung",
+    "Baumpflege",
     "Heckenschnitt",
-    "Schnittarbeiten",
-    "Saisonarbeiten Garten",
-    "Gärtner Aargau",
-    "Gartenservice",
+    "Bepflanzung",
   ],
-  authors: [{ name: "Gartenunterhalt Merian" }],
+  authors: [{ name: "Gärtnerei Merian" }],
   openGraph: {
     type: "website",
     locale: "de_CH",
     url: siteUrl,
-    siteName: "Gartenunterhalt Merian",
-    title: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
+    siteName: "Gärtnerei Merian",
+    title: "Gärtnerei Merian – Gartenpflege in Luzern",
     description:
-      "Persönlicher Gartenunterhalt für Rasen, Hecken, Beete und saisonale Arbeiten.",
+      "Gartenreinigung, Bepflanzung, Wintervorbereitung und Baumpflege – gepflegt mit Sorgfalt und Freude.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gartenunterhalt Merian – Gartenunterhalt und Saisonarbeiten",
+    title: "Gärtnerei Merian – Gartenpflege in Luzern",
     description:
-      "Unkomplizierter Gartenunterhalt: persönlich geplant, sauber umgesetzt.",
+      "Gärten aller Art, gepflegt mit Sorgfalt und Freude von Timon Merian.",
   },
   icons: {
     icon: "/favicon.ico",

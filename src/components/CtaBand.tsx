@@ -1,15 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./ui";
 import { Reveal } from "./Reveal";
 import { useSiteContent } from "@/sanity/useSiteContent";
 
 export function CtaBand() {
-  const { marketing } = useSiteContent();
+  const { marketing, offer } = useSiteContent();
   return (
-    <section className="bg-bg">
-      <Container className="pb-20 sm:pb-28 lg:pb-32">
+    <section id="kontakt-cta" className="bg-bg">
+      <Container className="pb-20 pt-16 sm:pb-28 sm:pt-20 lg:pb-32 lg:pt-24">
         <Reveal>
           <div className="relative overflow-hidden rounded-[28px] bg-ink px-8 py-16 text-white sm:px-14 sm:py-20">
             <div
@@ -17,17 +18,31 @@ export function CtaBand() {
               className="pointer-events-none absolute inset-0 opacity-95"
               style={{
                 background:
-                  "radial-gradient(85% 140% at 100% 0%, rgba(255,117,32,0.52), transparent 48%), radial-gradient(70% 120% at 0% 100%, rgba(255,117,32,0.38), transparent 52%), radial-gradient(55% 90% at 65% 50%, rgba(30,150,212,0.18), transparent 55%)",
+                  "radial-gradient(80% 130% at 100% 0%, rgba(124,105,168,0.55), transparent 50%), radial-gradient(70% 120% at 0% 100%, rgba(124,105,168,0.32), transparent 55%), radial-gradient(55% 90% at 60% 50%, rgba(107,143,85,0.26), transparent 55%)",
               }}
             />
-            <div className="relative flex flex-col items-start gap-7 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-[34rem]">
+            <Image
+              src="/illustrations/lavender.png"
+              alt=""
+              aria-hidden
+              width={220}
+              height={320}
+              className="pointer-events-none absolute -bottom-8 right-6 hidden h-auto w-28 rotate-6 opacity-90 drop-shadow-[0_16px_28px_rgba(0,0,0,0.35)] sm:block lg:w-36"
+            />
+
+            <div className="relative flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-[38rem]">
+                {offer.deadline ? (
+                  <p className="mb-4 inline-flex rounded-full bg-white/15 px-3 py-1 text-[13px] font-medium tracking-[0.02em] text-white">
+                    {offer.deadline}
+                  </p>
+                ) : null}
                 <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-medium leading-[1.04] tracking-[-0.03em]">
-                  {marketing.ctaHeadingLine1}{" "}
-                  <span className="font-serif italic text-white/80">{marketing.ctaHeadingAccent}</span>?
+                  {offer.title}
                 </h2>
-                <p className="mt-4 max-w-[30rem] text-[17px] leading-[1.55] text-white/75">
-                  {marketing.ctaBody}
+                <p className="mt-4 max-w-[32rem] text-[17px] leading-[1.55] text-white/80">
+                  {marketing.ctaHeadingLine1}{" "}
+                  <span className="text-white">{marketing.ctaHeadingAccent}?</span> {marketing.ctaBody}
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">

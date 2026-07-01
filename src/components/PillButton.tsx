@@ -21,7 +21,7 @@ const VARIANTS: Record<Variant, string> = {
   light:
     "bg-white text-ink border border-line hover:border-ink/30 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.2)]",
   orange:
-    "bg-orange text-white border border-orange hover:brightness-95 hover:shadow-[0_8px_24px_-10px_rgba(255,117,32,0.6)]",
+    "bg-orange text-white border border-orange hover:brightness-95 hover:shadow-[0_8px_24px_-10px_rgba(124,105,168,0.6)]",
   white:
     "bg-white text-ink border border-white hover:shadow-[0_16px_40px_-16px_rgba(0,0,0,0.4)]",
   outline:

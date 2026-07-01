@@ -14,7 +14,7 @@ export function BuchungContent() {
   return (
     <main>
       <PageHero
-        image="/hero/garden-gallery-2.svg"
+        image="/photos/tree-pruning.jpg"
         title={
           <>
             Termin <span className="font-serif italic text-white/75">buchen</span>.
@@ -40,7 +40,7 @@ export function BuchungContent() {
 
             <div className="rounded-3xl border border-line bg-white p-6 sm:p-8">
               <div className="mb-5 flex items-center gap-3">
-                <span className="flex size-11 items-center justify-center rounded-xl bg-orange-soft text-[#7a4400]">
+                <span className="flex size-11 items-center justify-center rounded-xl bg-orange-soft text-lavender-deep">
                   <CalendarIcon className="size-5" />
                 </span>
                 <div>

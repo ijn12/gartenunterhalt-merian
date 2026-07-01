@@ -9,10 +9,10 @@ import type { ServiceDetail, ServiceItem } from "@/lib/site";
 import { useSiteContent } from "@/sanity/useSiteContent";
 
 export function ServiceCard({ s }: { s: ServiceItem }) {
-  const Icon = serviceIcons[s.icon] ?? serviceIcons.Home;
+  const Icon = serviceIcons[s.icon] ?? serviceIcons.Cleanup;
   return (
-    <div className="group flex h-full flex-col gap-4 rounded-[22px] border border-line bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-[#d9d6cc] hover:shadow-[0_24px_50px_-28px_rgba(0,0,0,0.2)]">
-      <div className="flex size-11 items-center justify-center rounded-xl bg-orange-soft text-[#7a4400] transition-transform duration-200 group-hover:scale-105">
+    <div className="group flex h-full flex-col gap-4 rounded-[22px] border border-line bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-orange/40 hover:shadow-[0_24px_50px_-28px_rgba(95,77,138,0.28)]">
+      <div className="flex size-11 items-center justify-center rounded-xl bg-orange-soft text-lavender-deep transition-transform duration-200 group-hover:scale-105">
         <Icon className="size-[22px] stroke-[1.5]" aria-hidden />
       </div>
       <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.02em]">{s.title}</h3>
@@ -23,9 +23,9 @@ export function ServiceCard({ s }: { s: ServiceItem }) {
 
 export function ServiceDetailCard({ s }: { s: ServiceDetail }) {
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-200 hover:-translate-y-1 hover:border-[#d9d6cc] hover:shadow-[0_24px_50px_-28px_rgba(0,0,0,0.2)]">
+    <div className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-200 hover:-translate-y-1 hover:border-orange/40 hover:shadow-[0_24px_50px_-28px_rgba(95,77,138,0.28)]">
       {s.image ? (
-        <div className="relative aspect-[2/1] overflow-hidden bg-line-2">
+        <div className="relative aspect-[4/3] overflow-hidden bg-line-2">
           <Image
             src={s.image}
             alt={s.title}
@@ -35,7 +35,7 @@ export function ServiceDetailCard({ s }: { s: ServiceDetail }) {
           />
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-t from-[rgba(35,58,71,0.35)] to-transparent"
+            className="absolute inset-0 bg-gradient-to-t from-[rgba(44,69,38,0.4)] to-transparent"
           />
         </div>
       ) : null}
@@ -80,9 +80,9 @@ export function HomeServicesGrid() {
 }
 
 export function Services() {
-  const { marketing } = useSiteContent();
+  const { marketing, detailServices } = useSiteContent();
   return (
-    <section id="services" className="bg-bg">
+    <section id="services" className="border-b border-line bg-white">
       <Container className="py-20 sm:py-28 lg:py-32">
         <div className="mb-12 flex flex-col items-start justify-between gap-8 sm:mb-14 md:flex-row md:items-end">
           <Reveal>
@@ -92,13 +92,19 @@ export function Services() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <PillButton href="/buchung" variant="ghost" size="md">
+            <PillButton href="/kontakt" variant="ghost" size="md">
               {marketing.servicesCtaLabel}
             </PillButton>
           </Reveal>
         </div>
 
-        <HomeServicesGrid />
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {detailServices.map((s, i) => (
+            <Reveal key={s.title + i} delay={(i % 2) * 0.1} className="h-full">
+              <ServiceDetailCard s={s} />
+            </Reveal>
+          ))}
+        </div>
       </Container>
     </section>
   );

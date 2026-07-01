@@ -1,14 +1,14 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 const ICON_OPTIONS = [
-  { title: "Haus / vor Ort", value: "Home" },
-  { title: "Werkzeug / Gartenarbeit", value: "Wrench" },
-  { title: "Herz / Pflege", value: "Heart" },
-  { title: "Box / Saisonarbeiten", value: "Box" },
-  { title: "Mobile / schnelle Anfrage", value: "Mobile" },
-  { title: "Desktop / neutral", value: "Desktop" },
-  { title: "Gaming / neutral", value: "Gaming" },
-  { title: "Terminal / neutral", value: "Penguin" },
+  { title: "Blatt / Gartenreinigung", value: "Cleanup" },
+  { title: "Blume / Bepflanzung", value: "Planting" },
+  { title: "Schere / Schnitt & Winter", value: "Winter" },
+  { title: "Baum / Baumpflege", value: "Tree" },
+  { title: "Setzling / Rasenpflege", value: "Lawn" },
+  { title: "Gespräch / Beratung", value: "Advice" },
+  { title: "Sonne / Saison", value: "Season" },
+  { title: "Bäume / Hecken", value: "Hedge" },
 ];
 
 export const servicesContent = defineType({
@@ -35,7 +35,7 @@ export const servicesContent = defineType({
               title: "Icon",
               type: "string",
               options: { list: ICON_OPTIONS },
-              initialValue: "Home",
+              initialValue: "Cleanup",
             }),
             defineField({ name: "title", title: "Titel", type: "string", validation: (r) => r.required() }),
             defineField({ name: "desc", title: "Beschreibung", type: "text", rows: 3 }),
@@ -59,7 +59,7 @@ export const servicesContent = defineType({
               title: "Icon",
               type: "string",
               options: { list: ICON_OPTIONS },
-              initialValue: "Heart",
+              initialValue: "Cleanup",
             }),
             defineField({ name: "title", title: "Titel", type: "string", validation: (r) => r.required() }),
             defineField({
