@@ -193,6 +193,11 @@ export const booking = {
   providerName: "Online-Buchung",
   providerUrl: "",
   embedUrl: "",
+  // Cal.com inline embed. calLink is "username/event-slug"; calOrigin is the EU instance
+  // (bookings are served from app.cal.eu, not cal.com).
+  calLink: "timonmerian/besichtigung",
+  calNamespace: "besichtigung",
+  calOrigin: "https://app.cal.eu",
   fallbackTitle: "Online-Buchung folgt in Kürze",
   fallbackBody:
     "Ein Tool zum Buchen von freien Terminen ist in Vorbereitung. Für dringende Einsätze oder eine gratis Besichtigung melden Sie sich bitte direkt per Telefon oder E-Mail.",

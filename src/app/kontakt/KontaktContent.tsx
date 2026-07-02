@@ -1,13 +1,15 @@
 "use client";
 
 import { PageHero } from "@/components/PageHero";
-import { ContactForm } from "@/components/ContactForm";
 import { Container, Label } from "@/components/ui";
 import { PhoneIcon, MailIcon, PinIcon } from "@/components/icons";
 import { useSiteContent } from "@/sanity/useSiteContent";
 
 export function KontaktContent() {
   const { contact } = useSiteContent();
+  const region = [contact.street, `${contact.zip} ${contact.city}`.trim()]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
     <main>
@@ -18,56 +20,53 @@ export function KontaktContent() {
             Fragen zum <span className="font-serif italic text-white/75">Garten</span>?
           </>
         }
-        subtitle="Schreiben Sie kurz, welche Arbeiten anstehen. Für Termine, Fotos oder erste Abklärungen können Sie sich auch direkt per Telefon oder E-Mail melden."
+        subtitle="Melden Sie sich direkt per Telefon oder E-Mail – am besten mit ein paar Worten dazu, welche Arbeiten anstehen."
       />
 
       <section className="bg-bg">
-        <Container className="grid grid-cols-1 items-start gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16">
-          {/* Left: details */}
-          <div className="flex flex-col gap-8">
-            <div>
-              <h2 className="mb-1 text-xl font-medium tracking-[-0.02em]">{contact.company}</h2>
-              <p className="text-[15px] text-ink-2">{contact.owner}</p>
+        <Container className="py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-medium tracking-[-0.02em]">{contact.company}</h2>
+              <p className="mt-1 text-[15px] text-ink-2">{contact.owner}</p>
             </div>
 
-            <div className="flex flex-col">
-              {[
-                {
-                  Icon: PinIcon,
-                  label: "Einsatzgebiet",
-                  value: [contact.street, `${contact.zip} ${contact.city}`.trim()]
-                    .filter(Boolean)
-                    .join(" · "),
-                },
-                { Icon: PhoneIcon, label: "Telefon", value: contact.phone, href: contact.phoneHref },
-                { Icon: MailIcon, label: "E-Mail", value: contact.email, href: contact.emailHref },
-              ].map(({ Icon, label, value, href }) => {
-                const inner = (
-                  <div className="grid grid-cols-[auto_1fr] items-center gap-4 border-b border-line py-3.5 transition-colors group-hover:border-ink/20">
-                    <span className="flex size-9 items-center justify-center rounded-lg bg-white text-ink-2 ring-1 ring-line">
-                      <Icon className="size-[18px]" />
-                    </span>
-                    <span>
-                      <Label className="block">{label}</Label>
-                      <span className="block text-[15px] text-ink">{value}</span>
-                    </span>
-                  </div>
-                );
-                return href ? (
-                  <a key={label} href={href} className="group">
-                    {inner}
-                  </a>
-                ) : (
-                  <div key={label} className="group">
-                    {inner}
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <a
+                href={contact.phoneHref}
+                className="group rounded-2xl border border-line bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-[0_18px_40px_-28px_rgba(35,58,71,0.5)]"
+              >
+                <span className="mb-4 flex size-11 items-center justify-center rounded-xl bg-orange-soft text-lavender-deep">
+                  <PhoneIcon className="size-5" />
+                </span>
+                <Label as="div" className="mb-1">
+                  Telefon
+                </Label>
+                <span className="text-[17px] font-medium">{contact.phone}</span>
+              </a>
+              <a
+                href={contact.emailHref}
+                className="group rounded-2xl border border-line bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-[0_18px_40px_-28px_rgba(35,58,71,0.5)]"
+              >
+                <span className="mb-4 flex size-11 items-center justify-center rounded-xl bg-orange-soft text-lavender-deep">
+                  <MailIcon className="size-5" />
+                </span>
+                <Label as="div" className="mb-1">
+                  E-Mail
+                </Label>
+                <span className="break-all text-[17px] font-medium">{contact.email}</span>
+              </a>
             </div>
+
+            {region ? (
+              <div className="mt-4 flex items-center justify-center gap-2.5 rounded-2xl border border-line bg-white px-6 py-4 text-[15px] text-ink-2">
+                <PinIcon className="size-[18px] text-ink-3" />
+                <span>
+                  <span className="font-medium text-ink">Einsatzgebiet:</span> {region}
+                </span>
+              </div>
+            ) : null}
           </div>
-
-          {/* Right: form */}
-          <ContactForm />
         </Container>
       </section>
     </main>
