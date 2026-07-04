@@ -178,14 +178,8 @@ export type CmsTestimonials = {
 
 export type CmsLegal = {
   impressumSubtitle?: string;
-  bank?: string;
-  hosting?: string;
-  responsible?: string;
-  privacyOfficer?: string;
-  treuhand?: string;
   footerTagline?: string;
   footerLinks?: { label: string; href: string }[];
-  privacyNote?: string;
 };
 
 export type CmsBooking = {

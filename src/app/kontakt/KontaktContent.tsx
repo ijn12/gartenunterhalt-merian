@@ -62,7 +62,7 @@ export function KontaktContent() {
               <div className="mt-4 flex items-center justify-center gap-2.5 rounded-2xl border border-line bg-white px-6 py-4 text-[15px] text-ink-2">
                 <PinIcon className="size-[18px] text-ink-3" />
                 <span>
-                  <span className="font-medium text-ink">Einsatzgebiet:</span> {region}
+                  <span className="font-medium text-ink">Adresse:</span> {region}
                 </span>
               </div>
             ) : null}

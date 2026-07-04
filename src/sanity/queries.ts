@@ -85,8 +85,7 @@ export const siteCmsQuery = groq`{
     items[]{ quote, name, role, "photoUrl": photo.asset->url }
   },
   "legal": *[_type == "legalContent" && _id == "legalContent"][0]{
-    impressumSubtitle, bank, hosting, responsible, privacyOfficer, treuhand,
-    footerTagline, footerLinks[]{ label, href }, privacyNote
+    impressumSubtitle, footerTagline, footerLinks[]{ label, href }
   },
   "booking": *[_type == "bookingContent" && _id == "bookingContent"][0]{
     eyebrow, title, intro, providerName, providerUrl, embedUrl,

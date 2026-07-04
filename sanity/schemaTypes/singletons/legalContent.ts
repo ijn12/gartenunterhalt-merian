@@ -7,15 +7,9 @@ export const legalContent = defineType({
   groups: [
     { name: "impressum", title: "Impressum", default: true },
     { name: "footer", title: "Footer" },
-    { name: "privacy", title: "Datenschutz" },
   ],
   fields: [
     defineField({ name: "impressumSubtitle", title: "Impressum – Untertitel", type: "string", group: "impressum", initialValue: "Angaben gemäss schweizerischem Recht." }),
-    defineField({ name: "bank", title: "Bankverbindung", type: "string", group: "impressum" }),
-    defineField({ name: "hosting", title: "Hosting", type: "string", group: "impressum" }),
-    defineField({ name: "responsible", title: "Verantwortlich für die Seite", type: "string", group: "impressum" }),
-    defineField({ name: "privacyOfficer", title: "Datenschutzbeauftragter", type: "string", group: "impressum" }),
-    defineField({ name: "treuhand", title: "Treuhand", type: "string", group: "impressum" }),
 
     defineField({
       name: "footerTagline",
@@ -40,14 +34,6 @@ export const legalContent = defineType({
           preview: { select: { title: "label", subtitle: "href" } },
         }),
       ],
-    }),
-
-    defineField({
-      name: "privacyNote",
-      title: "Datenschutzhinweis (Kontaktformular)",
-      type: "text",
-      rows: 6,
-      group: "privacy",
     }),
   ],
   preview: { prepare: () => ({ title: "Impressum, Footer & Rechtliches" }) },

@@ -3,9 +3,9 @@ import type { ServiceIconName } from "@/components/icons";
 export const contact = {
   company: "Gärtnerei Merian",
   owner: "Timon Merian",
-  street: "Region Luzern",
-  zip: "",
-  city: "",
+  street: "Hirschengraben 7",
+  zip: "6003",
+  city: "Luzern",
   country: "Schweiz",
   phone: "078 685 18 99",
   phoneHref: "tel:+41786851899",
@@ -165,17 +165,6 @@ export const values: { title: string; body: string }[] = [
   { title: "Natürlich", body: "Pflanzen, Boden und Saison geben den Takt vor." },
   { title: "Verlässlich", body: "Klare Absprachen und realistische Termine sind wichtiger als leere Versprechen." },
 ];
-
-export const impressum = {
-  bank: "Angaben folgen",
-  hosting: "Hosting in der Schweiz",
-  responsible: "Timon Merian",
-  privacyOfficer: "Timon Merian",
-  treuhand: "Angaben folgen",
-} as const;
-
-export const privacyNote =
-  "Diese Angaben dienen der Kontaktaufnahme und Terminabklärung. Bitte senden Sie keine vertraulichen Informationen über das Formular. Sie können sich jederzeit auch direkt per Telefon oder E-Mail melden.";
 
 export const map = {
   lat: 47.0502,

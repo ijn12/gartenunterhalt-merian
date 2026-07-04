@@ -42,11 +42,7 @@ export function ImpressumContent() {
         </a>
       ),
     },
-    { label: "Bankverbindung", value: legal.bank },
-    { label: "Hosting", value: legal.hosting },
-    { label: "Verantwortlich für die Seite", value: legal.responsible },
-    { label: "Datenschutzbeauftragter", value: legal.privacyOfficer },
-    { label: "Treuhand", value: legal.treuhand },
+    { label: "Verantwortlich für den Inhalt", value: contact.owner },
   ];
 
   return (
@@ -67,6 +63,19 @@ export function ImpressumContent() {
               </div>
             ))}
           </dl>
+
+          <div className="mx-auto mt-8 max-w-[44rem] space-y-3 text-[13.5px] leading-[1.6] text-ink-3">
+            <p>
+              <strong className="font-medium text-ink-2">Haftungsausschluss:</strong> Für die Inhalte
+              externer Links, auf die diese Website verweist, wird keine Haftung übernommen – für deren
+              Inhalt sind ausschliesslich die jeweiligen Betreiber verantwortlich.
+            </p>
+            <p>
+              <strong className="font-medium text-ink-2">Urheberrecht:</strong> Alle Texte, Bilder und
+              Grafiken auf dieser Website sind urheberrechtlich geschützt und dürfen ohne Zustimmung
+              nicht weiterverwendet werden.
+            </p>
+          </div>
         </Container>
       </section>
     </main>

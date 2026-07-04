@@ -12,8 +12,6 @@ import {
   tariffs as fbTariffs,
   tariffNote as fbTariffNote,
   wegpauschalen as fbWegpauschalen,
-  impressum as fbImpressum,
-  privacyNote as fbPrivacyNote,
   map as fbMap,
   booking as fbBooking,
 } from "@/lib/site";
@@ -241,20 +239,11 @@ export function useSiteContent() {
 
   const legal = {
     impressumSubtitle: val(c?.legal?.impressumSubtitle, "Angaben gemäss schweizerischem Recht."),
-    bank: val(c?.legal?.bank, fbImpressum.bank),
-    hosting: val(c?.legal?.hosting, fbImpressum.hosting),
-    responsible: val(c?.legal?.responsible, fbImpressum.responsible),
-    privacyOfficer: val(c?.legal?.privacyOfficer, fbImpressum.privacyOfficer),
-    treuhand: val(c?.legal?.treuhand, fbImpressum.treuhand),
     footerTagline: val(
       c?.legal?.footerTagline,
       "Gärten aller Art – gepflegt mit Sorgfalt und Freude in der Region Luzern.",
     ),
-    footerLinks: arr(c?.legal?.footerLinks, [
-      { label: "Datenschutz", href: "#" },
-      { label: "AGB", href: "#" },
-    ]),
-    privacyNote: val(c?.legal?.privacyNote, fbPrivacyNote),
+    footerLinks: arr(c?.legal?.footerLinks, [{ label: "Datenschutz", href: "/datenschutz" }]),
   };
 
   const booking = {
