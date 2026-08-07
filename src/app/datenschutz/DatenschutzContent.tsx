@@ -57,6 +57,25 @@ export function DatenschutzContent() {
               </p>
             </Section>
 
+            <Section title="Google Ads">
+              <p>
+                Diese Website nutzt das Google-Tag (Google Ads, Konto-ID AW-18374250145) zur Messung von
+                Anzeigen und Website-Besuchen. Dabei können Cookies gesetzt und technische Daten wie
+                IP-Adresse, Browser-Informationen und aufgerufene Seiten an Google übermittelt werden.
+                Die Bearbeitung erfolgt durch Google Ireland Limited bzw. Google LLC. Weitere
+                Informationen finden Sie in der{" "}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="underline decoration-line-2 underline-offset-2 hover:text-ink"
+                >
+                  Datenschutzerklärung von Google
+                </a>
+                .
+              </p>
+            </Section>
+
             <Section title="Terminbuchung über Cal.com">
               <p>
                 Für die Online-Terminbuchung binden wir den Buchungsdienst Cal.com ein (Anzeige über
@@ -86,10 +105,10 @@ export function DatenschutzContent() {
 
             <Section title="Cookies & lokaler Speicher">
               <p>
-                Diese Website selbst setzt keine Tracking- oder Werbe-Cookies. Lediglich technisch
-                notwendige Einträge im lokalen Speicher Ihres Browsers (localStorage) werden verwendet,
-                damit z.&nbsp;B. ein bereits geschlossener Hinweis-Banner nicht erneut angezeigt wird. Der
-                eingebundene Buchungsdienst Cal.com kann eigene Cookies setzen; hierfür gilt dessen
+                Neben dem Google-Tag (siehe oben) verwendet diese Website technisch notwendige Einträge
+                im lokalen Speicher Ihres Browsers (localStorage), damit z.&nbsp;B. ein bereits
+                geschlossener Hinweis-Banner nicht erneut angezeigt wird. Der eingebundene
+                Buchungsdienst Cal.com kann eigene Cookies setzen; hierfür gilt dessen
                 Datenschutzerklärung.
               </p>
             </Section>

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SitePopup } from "@/components/cms/SitePopup";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import "./globals.css";
+
+const GOOGLE_ADS_ID = "AW-18374250145";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +80,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} scroll-smooth`}
     >
       <body className="bg-bg text-ink font-sans antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
         <ScrollToTop />
         <SitePopup />
         {children}
