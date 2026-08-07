@@ -3,9 +3,8 @@ import Script from "next/script";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SitePopup } from "@/components/cms/SitePopup";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { GOOGLE_ADS_ID } from "@/lib/analytics";
 import "./globals.css";
-
-const GOOGLE_ADS_ID = "AW-18374250145";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
+import { trackBookingConversion } from "@/lib/analytics";
 
 type CalEmbedProps = {
   /** Cal.com booking link in the form "username/event-slug". */
@@ -20,8 +21,12 @@ export function CalEmbed({
   namespace = "besichtigung",
 }: CalEmbedProps) {
   useEffect(() => {
+    let cancelled = false;
+
     (async () => {
       const cal = await getCalApi({ namespace, embedJsUrl: EMBED_JS_URL });
+      if (cancelled) return;
+
       cal("ui", {
         theme: "light",
         hideEventTypeDetails: false,
@@ -31,7 +36,17 @@ export function CalEmbed({
           dark: { "cal-brand": "#9DB98C" },
         },
       });
+
+      // Google Ads "Termin vereinbaren" conversion – fires only after a booking succeeds.
+      cal("on", {
+        action: "bookingSuccessfulV2",
+        callback: trackBookingConversion,
+      });
     })();
+
+    return () => {
+      cancelled = true;
+    };
   }, [namespace]);
 
   return (
