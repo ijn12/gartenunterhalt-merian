@@ -63,9 +63,6 @@ export const metadata: Metadata = {
     description:
       "Gärten aller Art, gepflegt mit Sorgfalt und Freude von Timon Merian.",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
