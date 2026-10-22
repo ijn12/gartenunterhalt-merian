@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SitePopup } from "@/components/cms/SitePopup";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -94,6 +95,7 @@ export default function RootLayout({
         <ScrollToTop />
         <SitePopup />
         {children}
+        <Analytics />
       </body>
     </html>
   );
