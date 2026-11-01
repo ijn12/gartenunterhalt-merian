@@ -7,18 +7,17 @@ import { trackBookingConversion } from "@/lib/analytics";
 type CalEmbedProps = {
   /** Cal.com booking link in the form "username/event-slug". */
   calLink: string;
-  /** Instance origin. EU accounts (app.cal.eu) differ from the default cal.com. */
+  /** Origin of the Cal.com booking instance. */
   calOrigin?: string;
   namespace?: string;
 };
 
-// EU region: bookings are served from app.cal.eu, not cal.eu / cal.com.
-const EMBED_JS_URL = "https://app.cal.eu/embed/embed.js";
+const EMBED_JS_URL = "https://app.cal.com/embed/embed.js";
 
 export function CalEmbed({
   calLink,
-  calOrigin = "https://app.cal.eu",
-  namespace = "besichtigung",
+  calOrigin = "https://app.cal.com",
+  namespace = "https-cal.eu-timonmerian-besichtigung",
 }: CalEmbedProps) {
   useEffect(() => {
     let cancelled = false;
@@ -26,6 +25,8 @@ export function CalEmbed({
     (async () => {
       const cal = await getCalApi({ namespace, embedJsUrl: EMBED_JS_URL });
       if (cancelled) return;
+
+      window.Cal.config = { ...window.Cal.config, forwardQueryParams: true };
 
       cal("ui", {
         theme: "light",

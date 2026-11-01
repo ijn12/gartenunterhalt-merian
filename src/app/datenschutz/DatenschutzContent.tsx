@@ -79,7 +79,7 @@ export function DatenschutzContent() {
             <Section title="Terminbuchung über Cal.com">
               <p>
                 Für die Online-Terminbuchung binden wir den Buchungsdienst Cal.com ein (Anzeige über
-                app.cal.eu). Wenn Sie darüber einen Termin anfragen, werden die von Ihnen eingegebenen
+                app.cal.com). Wenn Sie darüber einen Termin anfragen, werden die von Ihnen eingegebenen
                 Angaben – etwa Name, E-Mail-Adresse und Terminwunsch – direkt an Cal.com übermittelt und
                 dort verarbeitet, um die Buchung zu ermöglichen. Es gilt zusätzlich die
                 Datenschutzerklärung von{" "}
