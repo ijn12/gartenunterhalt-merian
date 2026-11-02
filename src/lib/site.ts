@@ -11,8 +11,8 @@ export const contact = {
   phoneHref: "tel:+41786851899",
   mobile: "078 685 18 99",
   mobileHref: "tel:+41786851899",
-  email: "timonmerian@gmail.com",
-  emailHref: "mailto:timonmerian@gmail.com",
+  email: "gaertnereimerian@gmail.com",
+  emailHref: "mailto:gaertnereimerian@gmail.com",
   website: "www.gärtnerei-merian.ch",
 } as const;
 
