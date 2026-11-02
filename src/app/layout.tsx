@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SitePopup } from "@/components/cms/SitePopup";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { FlowerBloom } from "@/components/FlowerBloom";
 import { GOOGLE_ADS_ID } from "@/lib/analytics";
 import "./globals.css";
 
@@ -92,6 +93,7 @@ export default function RootLayout({
         <ScrollToTop />
         <SitePopup />
         {children}
+        <FlowerBloom />
         <Analytics />
       </body>
     </html>

@@ -6,14 +6,15 @@ type LogoProps = {
 export function Logo({ className = "h-9 w-auto" }: LogoProps) {
   return (
     <span
-      className={`inline-flex items-center gap-2 whitespace-nowrap font-serif text-[1.65rem] italic leading-none tracking-[-0.04em] text-ink ${className}`}
+      data-bloom-trigger
+      className={`group/logo inline-flex items-center gap-2 whitespace-nowrap font-serif text-[1.65rem] italic leading-none tracking-[-0.04em] text-ink ${className}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/illustrations/lavender.png"
         alt=""
         aria-hidden
-        className="h-[1.5em] w-auto -translate-y-[0.04em] shrink-0"
+        className="h-[1.5em] w-auto -translate-y-[0.04em] shrink-0 origin-bottom transition-transform duration-500 ease-out group-hover/logo:-rotate-12"
       />
       Gärtnerei Merian
     </span>
